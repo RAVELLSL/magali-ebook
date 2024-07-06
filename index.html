@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,94 +27,93 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #e0f7fa, #00838f); /* Degradê de azul claro para azul escuro */
+    background: linear-gradient(to bottom, #e0f7fa, #00838f);
     min-height: 100vh;
     font-size: 20px;
-    color: #333; /* Cor do texto mais escura para melhor contraste */
+    color: #333;
+    overflow: hidden;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    border: 1px solid #ddd; /* Cor das linhas suavizada */
+    border: 1px solid #ddd;
     background-color: white;
-    padding: 20px; /* Adiciona padding ao container */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave no container */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cabecalho {
     background-color: #eceff1;
     padding: 30px;
     text-align: center;
-    border: 1px solid #ddd; /* Cor das linhas suavizada */
-    margin-bottom: 20px; /* Reduz margens laterais */
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cabecalho h1 {
     font-family: 'Lobster', cursive;
-    font-size: 48px; /* Tamanho da fonte aumentado */
+    font-size: 48px;
     color: #00796b;
     margin-bottom: 10px;
 }
 
 .cabecalho h2 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 32px; /* Tamanho da fonte aumentado */
+    font-size: 32px;
     font-weight: normal;
     color: #004d40;
-    margin-top: 0; /* Remove margem superior */
+    margin-top: 0;
 }
 
 .corpo {
     display: flex;
     flex: 1;
-    border: 1px solid #ddd; /* Cor das linhas suavizada */
-    margin-bottom: 20px; /* Reduz margens laterais */
+    overflow: hidden;
 }
 
 .coluna1, .coluna2 {
-    border: 1px solid #ddd; /* Cor das linhas suavizada */
+    border: 1px solid #ddd;
     padding: 25px;
+    overflow-y: auto;
 }
 
 .coluna1 {
     flex: 1;
     margin-right: 15px;
     font-size: 20px;
-    background-color: #f9f9f9; /* Fundo claro para a coluna 1 */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    overflow-y: auto; /* Adiciona a barra de rolagem vertical */
-    max-height: 80vh; /* Define a altura máxima para a coluna1 */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 200px);
 }
 
 .coluna2 {
     flex: 4;
-    overflow-y: auto;
     font-size: 20px;
-    background-color: #ffffff; /* Fundo branco para a coluna 2 */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 200px);
 }
 
 .coluna2 h1, .coluna2 h2 {
     text-align: center;
     margin-bottom: 25px;
     font-size: 28px;
-    color: #00796b; /* Cor do texto dos títulos */
+    color: #00796b;
 }
 
 .coluna2 p {
     text-align: justify;
     margin-bottom: 15px;
     font-size: 22px;
-    line-height: 1.6; /* Aumenta o espaçamento entre linhas */
-    color: #616161; /* Cor do texto dos parágrafos */
+    line-height: 1.6;
+    color: #616161;
 }
 
-/* Centralizando todas as imagens em todas as seções */
 .coluna2 img {
     display: block;
     margin: 0 auto;
@@ -125,11 +123,11 @@ body {
     background-color: #eceff1;
     padding: 25px;
     text-align: center;
-    border: 1px solid #ddd; /* Cor das linhas suavizada */
+    border: 1px solid #ddd;
     font-size: 22px;
-    margin-top: 20px; /* Adiciona margem superior */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
@@ -148,18 +146,67 @@ body {
 
 .coluna1 nav ul li a {
     text-decoration: none;
-    color: #00796b; /* Cor dos links */
+    color: #00796b;
     font-weight: bold;
     display: block;
     padding: 10px;
     border-radius: 5px;
-    background-color: #eceff1; /* Cor de fundo dos links */
+    background-color: #eceff1;
     transition: background-color 0.3s ease;
     font-size: 20px;
 }
 
 .coluna1 nav ul li a:hover {
-    background-color: #b2dfdb; /* Alterar a cor de fundo ao passar o mouse sobre os links */
+    background-color: #b2dfdb;
+}
+
+.galeria-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.galeria-imagem {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.galeria-imagem.active {
+    display: block;
+}
+
+.seta-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.seta-esquerda, .seta-direita {
+    cursor: pointer;
+    padding: 16px;
+    color: #00796b;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    user-select: none;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.seta-esquerda:hover, .seta-direita:hover {
+    background-color: #b2dfdb;
+    color: white;
+}
+
+#galeria-fotos {
+    overflow: hidden; /* Remove a barra de rolagem específica da galeria de fotos */
 }
 
 @media screen and (max-width: 600px) {
@@ -189,7 +236,8 @@ body {
     }
 }
 
-</style>
+    </style>
+                    
 </head>
 <body>
     <div class="container">
@@ -211,6 +259,7 @@ body {
                         <li><a href="#" onclick="showContent('novo-coronavirus')">O Novo Coranavírus</a></li>
                         <li><a href="#" onclick="showContent('fragmentos-infancia-feliz-80')">Fragmentos de Uma Infância Feliz<br>(revisitado aos 80 anos)</a></li>
                         <li><a href="#" onclick="showContent('anexos')">Anexos</a></li>
+                        <li><a href="#" onclick="showContent('galeria-fotos')">Galeria de Fotos</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -394,23 +443,89 @@ body {
                     <p>Distinta amiga Magali:</p>
                     <p>Ao ter notícia por você que sua mãe havia tirado o seu nome de um romance de M. Delly o qual você não havia lido ainda, empenhei-me em encontrá-lo e tive a felicidade de o encontrar em um lugar de venda de livros usados, pois, nas livrarias não são mais encontrados esses livros tão delicados e que fizeram a alegria de uma mocidade não tão distante da atual. </p>
                     <p>Espero que você goste da lembrança que tive. Meus votos de Feliz Ano Novo para você e Iolita.</p>
-                    
                 </div>
-               
+
+                <section class="galeria-container">
+                    <div id="galeria-fotos" class="content hidden">
+                        <h1>GALERIA DE FOTOS</h1>
+                        <div class="galeria-container">
+                            <div class="galeria-imagem active">
+                                <img src="https://media.licdn.com/dms/image/D4E22AQFPzQu4rIJULg/feedshare-shrink_800/0/1720268556212?e=1723075200&v=beta&t=PFja4ysoOk9SPh4rumNKA9UY1mSh-mIwwCSaFOHT9PU" alt="Descrição da imagem" width="700" height="auto">
+                            </div>
+                            <div class="galeria-imagem active">
+                                <img src="https://media.licdn.com/dms/image/D4E22AQFxVKo6zWsOXQ/feedshare-shrink_800/0/1720268533806?e=1723075200&v=beta&t=OyfZk9Rppvb35LOrGGCskGjSXMqO1CSy1uaWkZckyQE" alt="Descrição da imagem" width="700" height="auto">
+                            </div>
+                            <div class="galeria-imagem active">
+                                <img src="https://media.licdn.com/dms/image/D4E22AQGHJIc_-5Qfzg/feedshare-shrink_800/0/1720268681899?e=1723075200&v=beta&t=WA5etDlNSH0K9M92R7RasEqOW88qqqWNAW2oAUN_qYQ" alt="Descrição da imagem" width="700" height="auto">
+                            </div>
+                            <div class="galeria-imagem active">
+                                <img src="https://media.licdn.com/dms/image/D4E22AQFaOcpSnWPl2w/feedshare-shrink_800/0/1720268664428?e=1723075200&v=beta&t=QgkqUHEtcl-uBb94G35K_rRH8NVNy6eoP2aMYTEpp0U" alt="Descrição da imagem" width="400" height="auto">
+                            </div>
+                            <div class="galeria-imagem active">
+                                <img src="https://media.licdn.com/dms/image/D4E22AQF_bSsAebVU_A/feedshare-shrink_2048_1536/0/1720268700034?e=1723075200&v=beta&t=NnT-Ows8y8BdfO2zv1gUItVCQfMtiH0sfCSGeEDdHcI" alt="Descrição da imagem" width="400" height="auto">
+                            </div>
+                            <div class="galeria-imagem active">
+                                <img src="https://media.licdn.com/dms/image/D4E22AQG91F8FQNuZhw/feedshare-shrink_2048_1536/0/1720268576922?e=1723075200&v=beta&t=aTUno-zB5u0TYdOsvRbHEiC9MpnzQzCJt4jG7z_ddYc" alt="Descrição da imagem" width="400" height="auto">
+                            </div>
+                            <div class="galeria-imagem active">
+                                <img src="https://media.licdn.com/dms/image/D4E22AQFj_vY5WIUmUg/feedshare-shrink_2048_1536/0/1720268715600?e=1723075200&v=beta&t=FOniF_EXrBiKCph77JyBGX6rMYCIkYQ2DTJMAYCyEUs" alt="Descrição da imagem" width="400" height="auto">
+                            </div>
+                            <div class="seta-container">
+                                <div class="seta-esquerda" onclick="mudarImagem(-1)">&#10094;</div>
+                                <div class="seta-direita" onclick="mudarImagem(1)">&#10095;</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>            
                 
             </section>
         </main>
-        <footer class="rodape">Rodapé</footer>
+        <footer class="rodape"></footer>
     </div>
 
     <script>
         function showContent(id) {
-            var contents = document.getElementsByClassName("content");
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].classList.add("hidden");
-            }
-            document.getElementById(id).classList.remove("hidden");
-        }
+    var contents = document.getElementsByClassName("content");
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.add("hidden");
+    }
+    document.getElementById(id).classList.remove("hidden");
+}
+
+let imagemIndex = 0;
+mostrarImagem(imagemIndex);
+
+function mudarImagem(n) {
+    mostrarImagem(imagemIndex += n);
+}
+
+function mostrarImagem(n) {
+    let i;
+    let imagens = document.getElementsByClassName("galeria-imagem");
+    if (n >= imagens.length) {
+        imagemIndex = 0;
+    }
+    if (n < 0) {
+        imagemIndex = imagens.length - 1;
+    }
+    for (i = 0; i < imagens.length; i++) {
+        imagens[i].style.display = "none";
+    }
+    imagens[imagemIndex].style.display = "block";
+}
+
+function showContent(id) {
+    var contents = document.getElementsByClassName("content");
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.add("hidden");
+    }
+    document.getElementById(id).classList.remove("hidden");
+    if (id === 'galeria-fotos') {
+        mostrarImagem(imagemIndex);
+    }
+}
+
+
     </script>
 </body>
 </html>
