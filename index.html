@@ -27,76 +27,88 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #e0f7fa, #00838f);
-    min-height: 100vh;
+    background: url('https://img.freepik.com/vetores-gratis/vetor-de-design-de-papel-de-carta-marrom-em-branco_53876-175008.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-size: 20px;
     color: #333;
+    height: 100vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    border: 1px solid #ddd;
-    background-color: white;
+    height: 100%;
+    border: 1px solid #4682B4;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 .cabecalho {
     background-color: #eceff1;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
+    border: 1px solid #4682B4;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    flex-shrink: 0;
 }
 
 .cabecalho h1 {
     font-family: 'Lobster', cursive;
-    font-size: 48px;
-    color: #00796b;
+    font-size: 56px;
+    color: #004d40;
     margin-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .cabecalho h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
     font-weight: normal;
-    color: #004d40;
+    color: #00796b;
     margin-top: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .corpo {
     display: flex;
     flex: 1;
     overflow: hidden;
-}
-
-.coluna1, .coluna2 {
-    border: 1px solid #ddd;
-    padding: 25px;
-    overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .coluna1 {
+    border: 1px solid #4682B4;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
+    max-width: 250px; /* ajustado para ser um pouco mais larga */
     margin-right: 15px;
     font-size: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: calc(100vh - 200px);
 }
 
 .coluna2 {
+    border: 1px solid #4682B4;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     flex: 4;
     font-size: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: calc(100vh - 200px);
 }
 
 .coluna2 h1, .coluna2 h2 {
@@ -121,13 +133,14 @@ body {
 
 .rodape {
     background-color: #eceff1;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #4682B4;
     font-size: 22px;
-    margin-top: 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    flex-shrink: 0;
 }
 
 .hidden {
@@ -165,7 +178,9 @@ body {
     max-width: 800px;
     margin: auto;
     text-align: center;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .galeria-imagem {
@@ -179,17 +194,14 @@ body {
 }
 
 .seta-container {
-    position: absolute;
-    top: 50%;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .seta-esquerda, .seta-direita {
     cursor: pointer;
-    padding: 16px;
+    padding: 10px 20px;
     color: #00796b;
     font-weight: bold;
     font-size: 18px;
@@ -198,6 +210,8 @@ body {
     border: 1px solid #00796b;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    margin: 0 5px;
 }
 
 .seta-esquerda:hover, .seta-direita:hover {
@@ -206,7 +220,9 @@ body {
 }
 
 #galeria-fotos {
-    overflow: hidden; /* Remove a barra de rolagem específica da galeria de fotos */
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 15px; /* Ajuste para a barra de rolagem */
 }
 
 @media screen and (max-width: 600px) {
@@ -237,11 +253,13 @@ body {
 }
 
     </style>
-                    
 </head>
 <body>
     <div class="container">
-        <header class="cabecalho">Memórias Vívidas<br>Magali Borges da Fonseca</header>
+        <header class="cabecalho">
+            <h1>Memórias Vívidas</h1>
+            <h2>Magali Borges da Fonseca</h2>
+        </header>
         <main class="corpo">
             <aside class="coluna1">
                 <nav>
@@ -256,7 +274,7 @@ body {
                         <li><a href="#" onclick="showContent('hoje-06-agosto')">Hoje, 06 de Agosto</a></li>
                         <li><a href="#" onclick="showContent('espirito-natalino')">O Espírito Natalino Ainda Vive</a></li>
                         <li><a href="#" onclick="showContent('dia-eleicao')">Dia de Eleição...</a></li>
-                        <li><a href="#" onclick="showContent('novo-coronavirus')">O Novo Coranavírus</a></li>
+                        <li><a href="#" onclick="showContent('novo-coronavirus')">O Novo Coronavírus</a></li>
                         <li><a href="#" onclick="showContent('fragmentos-infancia-feliz-80')">Fragmentos de Uma Infância Feliz<br>(revisitado aos 80 anos)</a></li>
                         <li><a href="#" onclick="showContent('anexos')">Anexos</a></li>
                         <li><a href="#" onclick="showContent('galeria-fotos')">Galeria de Fotos</a></li>
@@ -402,35 +420,48 @@ body {
                     <p>Hoje, 03 de outubro de 2010, eu me dirijo mais uma vez à sessão eleitoral para votar. Neste momento, dois pensamentos antagônicos invadem a minha mente. Por um lado, eu me sinto uma cidadã consciente que exerce o direito e o dever de votar e, com isso, espera contribuir para a consolidação da democracia do seu país. É a minha consciência cívica que pesa neste momento; é o meu exercício de cidadania...</p>
                     <p>Por outro lado, eu me sinto tomada por sentimentos diversos: apatia, frieza, indiferença e, por que não dizer, revolta por me sentir "obrigada" a participar de um cenário político desastroso cujos atores principais (os candidatos) há muito deixaram de merecer a nossa credibilidade...</p>
                     <p>Se nós pararmos um pouco para pensar na realidade atual da política brasileira, nos deparamos com um ambiente contaminado por denúncias de corrupção, tráfico de influências, jogos de interesses e outros, praticados por aqueles que foram por nós "nomeados" para zelar pelos bens públicos e pela preservação de nossas instituições, tendo como produto final, o bem geral da sociedade. A experiência tem mostrado, ano após ano, que a grande preocupação da maioria dos nossos políticos é se dar bem nas eleições para poder usufruir das "benesses" que o exercício do cargo lhes proporciona, esquecendo, por completo, dos propósitos firmados nas campanhas eleitorais. Além disso, o investimento financeiro durante as campanhas é bastante alto e a preocupação principal dos candidatos é garantir a vitória nas urnas para saírem do "prejuízo". Os nossos partidos políticos, em sua grande maioria, estão descaracterizados e sem identidade própria; como colchas de retalhos, alianças são costuradas e descosturadas a cada eleição, numa constante mudança de lado dos seus filiados, participantes que são de um jogo aberto de oportunismo e descompromisso com os ideais partidários.</p>
-                    <p>Que saudade que eu tenho das antigas eleições quando nós acreditávamos nas boas intenções e no comprometimento dos nossos políticos e o dia de eleição tinha um significado todo especial... Quantas vezes eu vesti as cores do meu partido e empunhei a bandeira dos meus candidatos... Era uma época em que, ao contrário de hoje, havia Situação e Oposição como forças claramente delimitadas e nós estávamos convencidos da força e do poder do nosso voto como propulsor das mudanças necessárias. Hoje a situação é outra...</p>
-                    <p>Vale esclarecer, no entanto, que entre os nossos parlamentares ainda existe uma minoria de políticos sérios e responsáveis que não compactuam com esse estado de coisas, mas as suas vozes são envolvidas no redemoinho de interesses corporativos e partidários que caracteriza a atuação política dos nossos homens públicos. Assim, as suas bandeiras de responsabilidade, honestidade, compromisso e transparência não conseguem ser hasteadas.</p>
-                    <p>Diante do cenário político que se nos apresenta, vale perguntar: Qual a função do voto diante deste cenário que funciona como um jogo de cartas marcadas? É possível mudar alguma coisa? Qual o meu papel como eleitor?</p>
-                    <p>Sem encontrar as respostas desejadas, chego finalmente à sessão eleitoral e para ser coerente com tudo o que penso e defendo, não me resta alternativa a não ser votar em branco, branco este que significa ausência de opção neste momento...</p>
-                    <p>É claro que esta é mais uma eleição... Outras eleições virão, outros candidatos surgirão com novas propostas, novas plataformas políticas e, quem sabe, num futuro próximo este quadro atual se transforme. Vamos torcer para que novas lideranças políticas possam surgir e que tenham vez e voz para aprovar as reformas que o país está a exigir e que consigam "desengavetar" os projetos de interesse da sociedade guardados ano após ano. E, ainda, que o povo brasileiro aprenda a separar o "joio" do "trigo" e seja capaz de lutar por uma sociedade mais justa e igualitária. Só assim garantiremos o tão sonhado desenvolvimento político-econômico-social, cujos primeiros passos já começamos a ensaiar... Aí então, quem sabe, eu volto a sentir o mesmo entusiasmo, a mesma esperança de outras eleições e volto a ostentar as cores do meu partido e a empunhar a bandeira da vitória, comemorando a volta da moralidade à política brasileira... Quem sabe... Vamos esperar para ver...</p>
+                    <p>Que saudade que eu tenho das antigas eleições quando nós acreditávamos nas boas intenções dos candidatos e éramos movidos por sentimentos de confiança na sua atuação política, alimentando a esperança de um futuro promissor, de justiça, igualdade e desenvolvimento para a nossa sociedade. Por isso, nós vibrávamos e nos emocionávamos com o resultado das urnas.</p>
+                    <p>Hoje, a nossa descrença é evidente e a nossa preocupação com o amanhã é cada vez maior. Assim, vamos às urnas mais uma vez, imbuídos de um misto de sentimentos diversos, sem saber exatamente qual será o resultado da nossa escolha. O que fica claro é que a nossa participação no exercício do voto visa unicamente não “ser pego” pela Justiça Eleitoral, pois o eleitor que deixa de votar, sem justificativa, terá que enfrentar, segundo o Tribunal Superior Eleitoral, uma série de restrições tais como: impossibilidade de inscrever-se em concurso público, de obter passaporte, de renovar matrícula em estabelecimento de ensino oficial, além de outras penalidades previstas em lei. Por essas e outras razões, nós continuamos a votar.</p>
+                    <p>E para completar, ainda temos que suportar as dificuldades encontradas nas sessões eleitorais: longas filas, espera interminável, urnas eletrônicas que se apresentam com defeitos, atraso na apuração dos votos, etc. etc.</p>
+                    <p>Infelizmente, depois de eleitos, o comportamento dos candidatos vitoriosos é sempre uma incógnita. Os compromissos assumidos nas campanhas eleitorais caem no esquecimento e o político se acomoda e pouco realiza. Assim, vamos acumulando mais decepções, frustrações, o que só faz aumentar o nosso desencanto. Resta-nos aguardar, mais uma vez, o desenrolar dos acontecimentos e torcer para que o nosso voto não tenha sido em vão, mas tenha contribuído para uma sociedade mais justa, solidária e fraterna.</p>
+                    <p>Infelizmente, não temos nenhuma certeza disso...</p>
                 </div>
 
                 <div id="novo-coronavirus" class="content hidden">
                     <h1>O NOVO CORONAVÍRUS</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQFMqpplc_-9Ow/feedshare-shrink_2048_1536/0/1719793152053?e=1722470400&v=beta&t=rLqp0chKvAOm_zwzTzKYFGfUm-b8DwohUXuNE7dB4KM" alt="Descrição da imagem" width="400" height="auto">
+                    <img src="https://media.licdn.com/dms/image/D4E22AQF5bi3hrBtCTQ/feedshare-shrink_800/0/1719794297220?e=1722470400&v=beta&t=0DgsGRslJupJh88iBa0rR7xjt4gM8hOsHYmSKiCzNkY" alt="Descrição da imagem" width="550" height="auto">
                     <br>
-                    <p>E o inimigo invisível chegou... Sorrateiramente, sem alarde, atacando a todos indistintamente, sem levar em conta idade, classe social, gênero, obrigando todos a se prepararem para lutar contra o minúsculo inimigo.</p>
-                    <p>E assim foi formada uma grande cruzada envolvendo todos os países desde as grandes metrópoles até os países emergentes e subdesenvolvidos. Todos engajados em uma única missão: fazer frente à fera ansiosa para fazer mais vítimas. E assim os países esqueceram por um momento, suas divergências políticas e econômicas e se uniram num único objetivo: vencer a pandemia desastrosa que abalou as estruturas da Terra, provocando um desastre econômico e social que mudou radicalmente a maneira de viver das pessoas.</p>
-                    <p>E aí vieram: a quarentena, o isolamento social, a paralisação do comércio, da indústria e dos serviços obrigando as pessoas a permanecerem em confinamento em suas casas, mudando as relações sociais e afetivas e fazendo surgir demonstrações de solidariedade para com os seus semelhantes até então pouco conhecidas. O que se observou é que os habitantes dos grandes centros urbanos passaram a enxergar os habitantes das periferias e todos se uniram com um único objetivo, lutar com o inimigo comum: a pandemia, afinal estavam todos no mesmo barco. O resultado de tudo isso é que as pessoas tiveram que lançar mão de recursos até pouco usados e ingressaram no mundo digital para manterem suas relações sociais e familiares mesmo à distância. Além disso, o confinamento, a permanência em casa redefiniu as práticas familiares, fazendo com que as famílias se reinventassem e repensassem com os cônjuges e os filhos, coisa difícil de acontecer anteriormente quando a casa era, na maioria das vezes, o espaço por excelência de passagem e de preparação para as atividades do dia seguinte... Não havia tempo para discutir as relações...</p>
-                    <p>Nós acreditamos que esta pandemia vai passar, mas de uma coisa estamos certos: o mundo jamais será o mesmo, após a passagem do coronavírus por aqui!</p>
+                    <p>Eu me lembro de, há alguns anos atrás, ter ouvido falar pela primeira vez do coronavírus. Na época, a mídia noticiava a incidência do vírus no Oriente Médio e dava informações sobre os riscos de contaminação, além de alertar sobre a gravidade de alguns casos. Devido ao lugar e às condições de transmissão, o assunto não mereceu maior destaque e caiu no esquecimento...</p>
+                    <p>De repente, como que “saindo do nada”, surge um novo tipo de coronavírus, identificado como SARS-CoV-2 e que provoca a doença batizada de Covid-19.</p>
+                    <p>Em pouco tempo, o vírus, que tem origem na China, se espalha pelo mundo todo, adquire status de pandemia e causa um verdadeiro pânico nas populações mundiais. Inicialmente, a gravidade do problema foi negada por alguns governantes e, a partir daí, foi tratada de forma equivocada por muitos países, inclusive o Brasil, fato que propiciou o aumento no número de infectados e mortes.</p>
+                    <p>Os primeiros casos começaram a surgir no Brasil no final de fevereiro de 2020 e logo o vírus se espalhou por todo o território nacional. Os primeiros cuidados a serem tomados para conter a proliferação do vírus causador da Covid-19 eram, basicamente, os mesmos divulgados na primeira epidemia de coronavírus e bem conhecidos de todos nós: higiene rigorosa das mãos, uso de álcool em gel e máscara, evitar aglomerações e manter uma distância mínima entre as pessoas, ou seja, “distanciamento social”. Tais cuidados foram divulgados amplamente pelos meios de comunicação e pelos serviços de saúde pública e, no início, foram muito bem aceitos e praticados por todos.</p>
+                    <p>Para contribuir com o combate à proliferação do vírus, o governo federal e os governos estaduais tomaram uma série de providências, tais como fechamento do comércio e escolas, cancelamento de eventos com grande número de pessoas, implantação do sistema de “home-office”, além de outras medidas para que o isolamento social fosse obedecido.</p>
+                    <p>Com o passar do tempo, contudo, a pandemia foi se alastrando de forma assustadora, muitas vidas foram ceifadas, muitas pessoas foram contaminadas, novos casos foram surgindo, hospitais se tornaram superlotados e um verdadeiro colapso no sistema de saúde se instalou.</p>
+                    <p>O brasileiro, reconhecido mundialmente por sua maneira alegre de viver, que acredita que as adversidades devem ser vencidas com bom humor e confiança, estava agora vivendo uma situação de incerteza, insegurança e até mesmo de pânico diante de uma doença que, até o momento, não tem cura, nem mesmo medicamento específico para combatê-la. Na realidade, toda a humanidade, independente de classe social, religião ou etnia, está em estado de alerta diante de um inimigo comum e poderoso que, como em toda guerra, está provocando muitas mortes, perdas e sacrifícios...</p>
+                    <p>O governo brasileiro, a exemplo de outros países, procurou adotar uma série de medidas econômicas visando reduzir os prejuízos causados pela pandemia e, ao mesmo tempo, dar assistência à população de baixa renda, através de auxílios financeiros e cestas básicas. Além disso, empresas estão aderindo ao movimento “Vamos Vencer Juntos” que, entre outras ações, busca criar uma grande rede de solidariedade para ajudar aos mais necessitados.</p>
+                    <p>Os cientistas, apesar do pouco tempo de pesquisa, já estão conseguindo avanços importantes, tais como a criação de novos testes para detecção do vírus em pessoas contaminadas e, mais recentemente, testes para identificação de anticorpos produzidos por pessoas já curadas da doença. A produção de respiradores artificiais, em maior quantidade, para atender aos casos mais graves da doença está aumentando consideravelmente. A busca de medicamentos que possam reduzir os efeitos do vírus está em estágio avançado e já são divulgadas algumas experiências exitosas neste sentido. A preocupação maior e a luta mais ferrenha da classe científica, no entanto, reside na descoberta de uma vacina contra a Covid-19, sendo essa a única solução para erradicação da doença no planeta. Entrementes, tudo indica que a erradicação do novo coronavírus será uma realidade, num futuro próximo.</p>
+                    <p>Através de pesquisas realizadas com a população, foi detectado que, neste momento de crise, a solidariedade, o bom senso e o espírito de união estão mais fortes e presentes entre nós. Apesar do distanciamento social, da proibição de aglomerações, estamos nos comunicando mais com as pessoas queridas, sejam elas familiares, amigos ou vizinhos e, com isso, estreitando os laços afetivos. Estamos resgatando o hábito de um convívio familiar mais harmonioso e a redescobrindo a importância dos relacionamentos sociais. O mundo se deu conta de que não estava preparado para enfrentar esta crise de grandes proporções e que devemos refletir mais sobre o presente e o futuro da humanidade, buscando a criação de novos valores e novas formas de convivência com a natureza e com os nossos semelhantes.</p>
+                    <p>Essa pandemia, que trouxe tanto sofrimento para a humanidade, está, de alguma forma, sendo responsável por uma mudança na maneira de viver e conviver dos seres humanos e, na medida em que estamos aprendendo com ela, temos a oportunidade de nos tornarmos pessoas melhores...</p>
+                    <p>E para terminar, transcrevo o poema do jornalista Flávio Oliveira, da equipe de Comunicação Social do Tribunal de Contas do Estado de Pernambuco, que, com sensibilidade ímpar, expressa os sentimentos da maioria de nós neste momento de crise e incerteza. E ele faz um apelo para que, quando tudo isto passar, nós possamos refletir sobre a nossa responsabilidade de fazer um mundo melhor.</p>
+                    <p>Vale a pena ler e refletir...</p>
                 </div>
 
                 <div id="fragmentos-infancia-feliz-80" class="content hidden">
-                    <h1>FRAGMENTOS DE UMA INFÂNCIA FELIZ<br>(revisitados aos 80 Anos)</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQGKxHl9WXge_g/feedshare-shrink_800/0/1719671895314?e=1722470400&v=beta&t=zlMjXhpzlH0KZkLAmyy0rb0rtdrpUhNicLNrtKQPy_A" alt="Descrição da imagem" width="400" height="auto">
-                    <br>                    
-                    <p>É sempre uma jornada melancólica revisitar os fatos marcantes de minha infância, agora sob a luz do crepúsculo dos meus 80 anos. Essas memórias, outrora vivas e alegres, hoje ecoam em um mundo que mal reconheço - um mundo fragmentado por disputas, isolamento e uma incompreensível hostilidade.</p>
-                    <p>Minha rua, meu universo particular de infância, era um tecido ricamente entrelaçado de parentes e amigos, um lugar onde a discriminação não tinha vez. Meninos e meninas, brancos e negros, filhos de famílias abastadas ou humildes, todos formavam um único grupo unido pela inocência e a alegria pura de viver. Agora, olhando para trás, percebo o quão raro e precioso era aquele senso de comunidade.</p>
-                    <p>As brincadeiras ao ar livre, sob o céu estrelado e na rua de terra batida, parecem agora um sonho distante. Nossos pés descalços sentindo a terra, a alegria simples de estar em contato com a natureza - tudo isso agora é uma lembrança embaçada, em um tempo onde as brincadeiras ao ar livre deram lugar a um mundo virtual, recluso e individualista.</p>
-                    <p>A tranquilidade e paz que reinavam nas nossas ruas, a ausência de violência, a certeza da segurança - tudo isso parece uma utopia perdida. O mundo de hoje, com suas preocupações constantes e sua vigilância perpétua, contrasta dolorosamente com a inocência daquela época. Ah, as árvores frondosas dos nossos quintais! Escalar essas árvores para colher frutas era um prazer indescritível. Hoje, vejo que aqueles espaços livres e abertos foram tragados pela expansão urbana, deixando saudades de um tempo onde a natureza era uma extensão de nossos lares.</p>
-                    <p>Nosso modo de brincar era, sem sabermos, uma academia de ginástica ao ar livre. Corríamos, pulávamos, escalávamos - atividades que, ao olhar agora, parecem ter desaparecido na geração atual, tão absorta em dispositivos eletrônicos e jogos virtuais. As “rodas de conversas”, onde compartilhávamos histórias e aventuras imaginárias, agora parecem um contraste gritante com o mundo atual, onde a comunicação é tão fragmentada e digital. Aquelas histórias, cheias de magia e maravilhas, formavam um forte contraste com a dura realidade que enfrento hoje, um mundo onde a imaginação e a inocência parecem ter se perdido.</p>
-                    <p>Recordo-me com um misto de nostalgia e pesar das brincadeiras coletivas e das peças teatrais ao ar livre que organizávamos. Eram momentos de pura alegria e criatividade. Hoje, percebo que a infância se tornou algo tão diferente, tão abreviada e menos inocente. Ao contrário da minha infância, vivida plenamente e repleta de memórias agradáveis, hoje me encontro em um estado de reflexão sombria. Apesar das experiências adquiridas ao longo dos anos, não me considero feliz no momento. O mundo mudou drasticamente, e muitas vezes me sinto como um estranho, perdido em meio às transformações que não consigo compreender ou aceitar.</p>
+                    <h1>FRAGMENTOS DE UMA INFÂNCIA FELIZ (Revisitado aos 80 anos)</h1>
+                    <img src="https://media.licdn.com/dms/image/D4E22AQFzT0_ucKqbdA/feedshare-shrink_800/0/1719671476949?e=1722470400&v=beta&t=WMeutax79bcLlEc1DBXnNUUCJnh_I4ybFIoltwM98DY" alt="Descrição da imagem" width="400" height="auto">
+                    <br>
+                    <p>A nossa rua era o nosso mundo particular, composto em sua maioria, por parentes e amigos de longa data. Nós formávamos um grande grupo e a discriminação não fazia parte do nosso vocabulário. Assim, meninos e meninas, brancos e negros, filhos de famílias abastadas ou de famílias humildes compunham um 'todo', cuja única preocupação era se divertir e aproveitar os momentos que a nossa convivência proporcionava...</p>
+                    <p>E o que dizer dos jogos e brincadeiras à noite, ao ar livre, na rua tranquila, de terra batida, com pouca circulação de veículos? Os nossos pés descalços permitiam o contato direto com a terra e a 'sujeira' das brincadeiras fazia tanto bem! A proximidade com a natureza, tão alardeada nos dias de hoje, estava presente na maioria das nossas atividades...</p>
+                    <p>A tranquilidade, a paz que reinava em nossas ruas, a ausência de violência, a certeza da segurança permitiam que as nossas brincadeiras se prolongassem noite adentro e só terminassem quando nossas mães, sentadas em cadeiras nas calçadas, alertavam que era hora de dormir. Assim, nos despedíamos dos amigos, cansados e suados, porém felizes, dispostos a enfrentar o acordar cedo do dia seguinte para ir à escola e começar tudo de novo...</p>
+                    <p>Como é bom recordar o prazer de 'escalar' as árvores frondosas dos nossos quintais para colher com as 'próprias mãos' mangas, carambolas, goiabas, azeitonas, jambos e outros, retirados na hora e saboreados à sombra destas mesmas árvores que deixaram de existir e perderam espaço para a expansão imobiliária e seus condomínios cada vez mais numerosos, de espaços limitados e cercados de muros altos. Ah! Que saudade da casa da tia Marieta com seu pomar convidativo e 'aberto' à toda a meninada...</p>
+                    <p>Nós não percebíamos, mas com nossos jogos e brincadeiras nós estávamos em plena academia de ginástica ao ar livre e sem muros, exercitando músculos, nervos e ossos, trabalhando respiração e circulação, reduzindo estresse e ansiedade, enfim desfrutando dos benefícios de atividades físicas constantes e prazerosas que, com certeza, repercutiram na nossa formação e crescimento. Além disso, estes momentos de lazer contribuíram também para o estreitamento de laços afetivos e o desenvolvimento social preparatórios para o ingresso no mundo adulto.</p>
+                    <p>Vale lembrar, também, as 'rodas de conversas' quando sentávamos no chão (as meninas principalmente) para ouvir 'histórias de Trancoso' (nunca entendi o significado da expressão). Nestas ocasiões, nos deliciávamos com as aventuras de príncipes e princesas, reis e rainhas, fadas e duendes e a nossa imaginação ia longe construindo/reconstruindo personagens e fatos nós nos transportávamos para aquele mundo mágico povoado por nobres e seus castelos suntuosos e dava até para imaginar as cenas se desenrolando à medida que as histórias eram narradas, tudo isso acontecia graças à habilidade da nossa narradora, de nome Toinha (empregada doméstica), que trabalhava os relatos de uma forma lúdica e com tamanha riqueza e detalhes que quase lhes dava vida.</p>
+                    <p>Apesar da maior parte das brincadeiras serem coletivas, havia espaço/ocasião para brincadeiras mais suaves e tranquilas - cantigas de roda, estátua, casinha e outras - direcionadas para as meninas. Já os meninos, partiam para brincadeiras mais movimentadas - cabo de guerra, espião, garrafão, barra bandeira, etc. - os quais, diante dos jogos eletrônicos atuais, eram de uma simplicidade, de uma ingenuidade sem comparação...</p>
+                    <p>Antes da chegada da TV, do computador e do celular, com seus estímulos e recursos auxiliares, nós fomos obrigados a construir o nosso mundo particular, a criar novos espaços de jogos e brincadeiras, usando para isso, dos recursos de que dispúnhamos no momento, o que contribuiu, sobremaneira, para estimular o raciocínio, a criatividade, a imaginação, a iniciativa, a socialização que, com certeza, nos ajudaram bastante no crescimento posterior...</p>
+                    <p>E o que dizer do nosso teatro ao ar livre, organizado pelas meninas quando nos transformávamos em produtores, diretores e atores de peças teatrais encenadas por nós, crianças, em dias programados (com cartazes expostos) e assistidos por nossos familiares e vizinhos. Era muito divertido e era gratificante ver na plateia a cara de orgulho dos nossos pais...</p>
+                    <p>Podemos dizer que, ao contrário de hoje, quando a infância é cada vez mais abreviada, a nossa infância foi muito bem vivida e durou o tempo necessário para deixar saudades e lembranças agradáveis para recordar!</p>
                 </div>
-                
+
                 <div id="anexos" class="content hidden">
                     <h1>ANEXOS</h1>
                     <h2>Origem do Nome Magali</h2>
@@ -444,7 +475,6 @@ body {
                     <p>Ao ter notícia por você que sua mãe havia tirado o seu nome de um romance de M. Delly o qual você não havia lido ainda, empenhei-me em encontrá-lo e tive a felicidade de o encontrar em um lugar de venda de livros usados, pois, nas livrarias não são mais encontrados esses livros tão delicados e que fizeram a alegria de uma mocidade não tão distante da atual. </p>
                     <p>Espero que você goste da lembrança que tive. Meus votos de Feliz Ano Novo para você e Iolita.</p>
                 </div>
-
                 <section class="galeria-container">
                     <div id="galeria-fotos" class="content hidden">
                         <h1>GALERIA DE FOTOS</h1>
@@ -476,15 +506,16 @@ body {
                             </div>
                         </div>
                     </div>
-                </section>            
-                
+                </section>     
             </section>
         </main>
-        <footer class="rodape"></footer>
+        <footer class="rodape">
+            <p>© 2024 <br>Magali Borges da Fonseca</p>
+        </footer>
     </div>
 
     <script>
-        function showContent(id) {
+              function showContent(id) {
     var contents = document.getElementsByClassName("content");
     for (var i = 0; i < contents.length; i++) {
         contents[i].classList.add("hidden");
@@ -524,8 +555,6 @@ function showContent(id) {
         mostrarImagem(imagemIndex);
     }
 }
-
-
     </script>
 </body>
 </html>
