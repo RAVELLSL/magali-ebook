@@ -29,7 +29,7 @@
 body {
     background: url('https://img.freepik.com/vetores-gratis/vetor-de-design-de-papel-de-carta-marrom-em-branco_53876-175008.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-size: 18px; /* Diminuído de 20px para 18px */
+    font-size: 18px;
     color: #333;
     height: 100vh;
     overflow: hidden;
@@ -50,7 +50,7 @@ body {
 
 .cabecalho {
     background-color: #eceff1;
-    padding: 6px; /* Diminuído de 8px para 6px */
+    padding: 6px;
     text-align: center;
     border: 1px solid #4682B4;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -60,15 +60,15 @@ body {
 
 .cabecalho h1 {
     font-family: 'Lobster', cursive;
-    font-size: 44px; /* Diminuído de 48px para 44px */
+    font-size: 44px;
     color: #004d40;
-    margin-bottom: 5px; /* Mantido */
+    margin-bottom: 5px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .cabecalho h2 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 26px; /* Diminuído de 28px para 26px */
+    font-size: 26px;
     font-weight: normal;
     color: #00796b;
     margin-top: 0;
@@ -85,7 +85,7 @@ body {
 
 .coluna1 {
     border: 1px solid #4682B4;
-    padding: 15px; /* Diminuído de 20px para 15px */
+    padding: 15px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -93,14 +93,14 @@ body {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
-    max-width: 250px; /* Mantido */
+    max-width: 250px;
     margin-right: 15px;
-    font-size: 18px; /* Diminuído de 20px para 18px */
+    font-size: 18px;
 }
 
 .coluna2 {
     border: 1px solid #4682B4;
-    padding: 15px; /* Diminuído de 20px para 15px */
+    padding: 15px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -108,23 +108,23 @@ body {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     flex: 4;
-    font-size: 18px; /* Diminuído de 20px para 18px */
+    font-size: 20px; /* Aumentado de 18px para 20px */
 }
 
 .coluna2 h1, .coluna2 h2 {
     text-align: center;
-    margin-bottom: 20px; /* Diminuído de 25px para 20px */
-    font-size: 26px; /* Diminuído de 28px para 26px */
+    margin-bottom: 20px;
+    font-size: 26px;
     color: #00796b;
 }
 
 .coluna2 p {
     text-align: justify;
-    margin-bottom: 12px; /* Diminuído de 15px para 12px */
-    font-size: 20px; /* Diminuído de 22px para 20px */
-    line-height: 1.5; /* Diminuído de 1.6 para 1.5 */
+    margin-bottom: 12px;
+    font-size: 22px; /* Aumentado de 20px para 22px */
+    line-height: 1.6; /* Ajustado de 1.5 para 1.6 */
     color: #616161;
-    text-indent: 2cm; /* Adicionado para espaçamento de 5 cm no início de cada parágrafo */
+    text-indent: 2cm;
 }
 
 .coluna2 img {
@@ -134,10 +134,10 @@ body {
 
 .rodape {
     background-color: #eceff1;
-    padding: 6px; /* Diminuído de 8px para 6px */
+    padding: 6px;
     text-align: center;
     border: 1px solid #4682B4;
-    font-size: 20px; /* Diminuído de 22px para 20px */
+    font-size: 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -155,7 +155,7 @@ body {
 
 .coluna1 nav ul li {
     text-align: center;
-    margin-bottom: 10px; /* Diminuído de 15px para 10px */
+    margin-bottom: 10px;
 }
 
 .coluna1 nav ul li a {
@@ -163,11 +163,11 @@ body {
     color: #00796b;
     font-weight: bold;
     display: block;
-    padding: 8px; /* Diminuído de 10px para 8px */
+    padding: 8px;
     border-radius: 5px;
     background-color: #eceff1;
     transition: background-color 0.3s ease;
-    font-size: 18px; /* Diminuído de 20px para 18px */
+    font-size: 18px;
 }
 
 .coluna1 nav ul li a:hover {
@@ -188,6 +188,18 @@ body {
     display: none;
     width: 100%;
     height: auto;
+}
+
+.galeria-imagem img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Define uma altura máxima para evitar que as imagens verticais sejam muito altas */
+    object-fit: contain; /* Ajusta as imagens para preencher o contêiner sem cortar */
+}
+
+.galeria-imagem p {
+    text-align: center;
+    font-size: 20px; /* Aumentado de 14px para 20px */
 }
 
 .galeria-imagem.active {
@@ -223,7 +235,7 @@ body {
 #galeria-fotos {
     overflow-y: auto;
     flex: 1;
-    padding-right: 15px; /* Ajuste para a barra de rolagem */
+    padding-right: 15px;
 }
 
 @media screen and (max-width: 600px) {
@@ -234,23 +246,97 @@ body {
     .coluna1 {
         margin-right: 0;
         margin-bottom: 15px;
-        font-size: 18px; /* Diminuído de 20px para 18px */
+        font-size: 18px;
     }
 
     .coluna1 nav ul li a {
-        padding: 12px; /* Diminuído de 15px para 12px */
-        font-size: 20px; /* Diminuído de 22px para 20px */
+        padding: 12px;
+        font-size: 20px;
     }
 
     .coluna2 p {
-        font-size: 20px; /* Diminuído de 22px para 20px */
+        font-size: 22px; /* Aumentado de 20px para 22px */
     }
 
     .cabecalho, .rodape {
         margin: 10px;
-        padding: 12px; /* Diminuído de 15px para 12px */
-        font-size: 20px; /* Diminuído de 22px para 20px */
+        padding: 12px;
+        font-size: 20px;
     }
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Removida a barra de rolagem */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta as imagens para preencher a tela */
+}
+
+.modal-content.horizontal {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.modal-content.vertical {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 20px; /* Aumentado de 16px para 20px */
+    height: 150px;
 }
 
     </style>
@@ -482,102 +568,122 @@ body {
                     <p>Ao ter notícia por você que sua mãe havia tirado o seu nome de um romance de M. Delly o qual você não havia lido ainda, empenhei-me em encontrá-lo e tive a felicidade de o encontrar em um lugar de venda de livros usados, pois, nas livrarias não são mais encontrados esses livros tão delicados e que fizeram a alegria de uma mocidade não tão distante da atual. </p>
                     <p>Espero que você goste da lembrança que tive. Meus votos de Feliz Ano Novo para você e Iolita.</p>
                 </div>
-                <section class="galeria-container">
-                    <div id="galeria-fotos" class="content hidden">
-                        <h1>GALERIA DE FOTOS</h1>
-                        <div class="galeria-container">
-                            <div class="galeria-imagem active">
-                                <img src="https://media.licdn.com/dms/image/D4E22AQFPzQu4rIJULg/feedshare-shrink_800/0/1720268556212?e=1723075200&v=beta&t=PFja4ysoOk9SPh4rumNKA9UY1mSh-mIwwCSaFOHT9PU" alt="Descrição da imagem" width="700" height="auto">
-                                <p>Foto no dia da formatura do curso pedagógico de Magali no Colégio Nossa Senhora do Carmo em 1963.<br> - da esquerda para a direita: Iolita Borges (irmã), Márcio Borges (irmão), Severino Fonseca (pai), Magali Borges, Maria Auta Borges (mãe) e Múcio Borges (irmão) - </p>
-                            
-                            </div>
-                            
-                            <div class="galeria-imagem active">
-                                <img src="https://media.licdn.com/dms/image/D4E22AQFxVKo6zWsOXQ/feedshare-shrink_800/0/1720268533806?e=1723075200&v=beta&t=OyfZk9Rppvb35LOrGGCskGjSXMqO1CSy1uaWkZckyQE" alt="Descrição da imagem" width="700" height="auto">
-                                <p>Foto dos quatro irmãos em São Paulo.<br> - Magali Borges, Múcio Borges, Iolita Borges e Márcio Borges - </p>
-                            
-                            </div>
-                           
-                            <div class="galeria-imagem active">
-                                <img src="https://media.licdn.com/dms/image/D4E22AQGHJIc_-5Qfzg/feedshare-shrink_800/0/1720268681899?e=1723075200&v=beta&t=WA5etDlNSH0K9M92R7RasEqOW88qqqWNAW2oAUN_qYQ" alt="Descrição da imagem" width="700" height="auto">
-                                <p>Foto de Magali com o diploma na formatura em 1963 recebendo o anel do irmão Múcio Borges (jornalista) sendo também a aluna laureada da turma.</p>
-                            </div>
-                            
-                            <div class="galeria-imagem active">
-                                <img src="https://media.licdn.com/dms/image/D4E22AQFaOcpSnWPl2w/feedshare-shrink_800/0/1720268664428?e=1723075200&v=beta&t=QgkqUHEtcl-uBb94G35K_rRH8NVNy6eoP2aMYTEpp0U" alt="Descrição da imagem" width="400" height="auto">
-                                <p>Foto no baile de formatura de Magali em 1963 com o irmão Márcio Borges que também se formou em medicina no mesmo ano.</p>
-                            </div>
-                            
-                            <div class="galeria-imagem active">
-                                <img src="https://media.licdn.com/dms/image/D4E22AQF_bSsAebVU_A/feedshare-shrink_2048_1536/0/1720268700034?e=1723075200&v=beta&t=NnT-Ows8y8BdfO2zv1gUItVCQfMtiH0sfCSGeEDdHcI" alt="Descrição da imagem" width="400" height="auto">
-                                <p>Foto da primeira comunhão de Magali aos 11 anos de idade.</p>
-                            </div>
-                            
-                            <div class="galeria-imagem active">
-                                <img src="https://media.licdn.com/dms/image/D4E22AQG91F8FQNuZhw/feedshare-shrink_2048_1536/0/1720268576922?e=1723075200&v=beta&t=aTUno-zB5u0TYdOsvRbHEiC9MpnzQzCJt4jG7z_ddYc" alt="Descrição da imagem" width="400" height="auto">
-                                <p>Foto de Magali aos 5 anos de idade.</p>
-                            </div>
-                            
-                            <div class="galeria-imagem active">
-                                <img src="https://media.licdn.com/dms/image/D4E22AQFj_vY5WIUmUg/feedshare-shrink_2048_1536/0/1720268715600?e=1723075200&v=beta&t=FOniF_EXrBiKCph77JyBGX6rMYCIkYQ2DTJMAYCyEUs" alt="Descrição da imagem" width="400" height="auto">
-                                <p>Foto de Magali com 1 ano de idade em Bom Jardim.</p>
-                            </div>
-                            
-                            <div class="seta-container">
-                                <div class="seta-esquerda" onclick="mudarImagem(-1)">&#10094;</div>
-                                <div class="seta-direita" onclick="mudarImagem(1)">&#10095;</div>
-                            </div>
+
+                <div id="galeria-fotos" class="content hidden">
+                    <h1>GALERIA DE FOTOS</h1>
+                    <div class="galeria-container">
+                        <div class="galeria-imagem active">
+                            <img src="https://media.licdn.com/dms/image/D4E22AQFPzQu4rIJULg/feedshare-shrink_800/0/1720268556212?e=1723075200&v=beta&t=PFja4ysoOk9SPh4rumNKA9UY1mSh-mIwwCSaFOHT9PU" alt="Imagem 1">
+                            <p>Foto no dia da formatura do curso pedagógico de Magali no Colégio Nossa Senhora do Carmo em 1963.
+                                <br>Iolita Borges (irmã), Márcio Borges (irmão), Severino Fonseca (pai), Magali Borges, Maria Auta Borges (mãe) e Múcio Borges (irmão)</p>
+                        </div>
+                        <div class="galeria-imagem">
+                            <img src="https://media.licdn.com/dms/image/D4E22AQFxVKo6zWsOXQ/feedshare-shrink_800/0/1720268533806?e=1723075200&v=beta&t=OyfZk9Rppvb35LOrGGCskGjSXMqO1CSy1uaWkZckyQE" alt="Imagem 2">
+                            <p>Foto dos quatro irmãos em São Paulo.<br>
+                                Magali Borges, Múcio Borges, Iolita Borges e Márcio Borges </p>
+                        </div>
+                        <div class="galeria-imagem">
+                            <img src="https://media.licdn.com/dms/image/D4E22AQGHJIc_-5Qfzg/feedshare-shrink_800/0/1720268681899?e=1723075200&v=beta&t=WA5etDlNSH0K9M92R7RasEqOW88qqqWNAW2oAUN_qYQ" alt="Imagem 3">
+                            <p>Foto de Magali com o diploma na formatura em 1963 recebendo o anel do irmão Múcio Borges (jornalista) sendo também a aluna laureada da turma.</p>
+                        </div>
+                        <div class="galeria-imagem">
+                            <img src="https://media.licdn.com/dms/image/D4E22AQFaOcpSnWPl2w/feedshare-shrink_800/0/1720268664428?e=1723075200&v=beta&t=QgkqUHEtcl-uBb94G35K_rRH8NVNy6eoP2aMYTEpp0U" alt="Imagem 4">
+                            <p>Foto no baile de formatura de Magali em 1963 com o irmão Márcio Borges que também se formou em medicina no mesmo ano.</p>
+                        </div>
+                        <div class="galeria-imagem">
+                            <img src="https://media.licdn.com/dms/image/D4E22AQF_bSsAebVU_A/feedshare-shrink_2048_1536/0/1720268700034?e=1723075200&v=beta&t=NnT-Ows8y8BdfO2zv1gUItVCQfMtiH0sfCSGeEDdHcI" alt="Imagem 5">
+                            <p>Foto da primeira comunhão de Magali aos 11 anos de idade.</p>
+                        </div>
+                        <div class="galeria-imagem">
+                            <img src="https://media.licdn.com/dms/image/D4E22AQG91F8FQNuZhw/feedshare-shrink_2048_1536/0/1720268576922?e=1723075200&v=beta&t=aTUno-zB5u0TYdOsvRbHEiC9MpnzQzCJt4jG7z_ddYc" alt="Imagem 6">
+                            <p>Foto de Magali aos 5 anos de idade.</p>
+                        </div>
+                        <div class="galeria-imagem">
+                            <img src="https://media.licdn.com/dms/image/D4E22AQFj_vY5WIUmUg/feedshare-shrink_2048_1536/0/1720268715600?e=1723075200&v=beta&t=FOniF_EXrBiKCph77JyBGX6rMYCIkYQ2DTJMAYCyEUs" alt="Imagem 7">
+                            <p>Foto de Magali com 1 ano de idade em Bom Jardim.</p>
+                        </div>
+                        <div class="seta-container">
+                            <span class="seta-esquerda" onclick="mudarImagem(-1)">&#10094;</span>
+                            <span class="seta-direita" onclick="mudarImagem(1)">&#10095;</span>
                         </div>
                     </div>
-                </section>     
+                </div>
             </section>
         </main>
         <footer class="rodape">
-            <p>© 2024 <br>Magali Borges da Fonseca</p>
+            <p>&copy; 2024 - Magali Borges da Fonseca.</p>
         </footer>
     </div>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
     <script>
-              function showContent(id) {
-    var contents = document.getElementsByClassName("content");
+        function showContent(id) {
+    var contents = document.getElementsByClassName('content');
     for (var i = 0; i < contents.length; i++) {
-        contents[i].classList.add("hidden");
+        contents[i].classList.add('hidden');
     }
-    document.getElementById(id).classList.remove("hidden");
+    document.getElementById(id).classList.remove('hidden');
 }
 
-let imagemIndex = 0;
-mostrarImagem(imagemIndex);
+var currentIndex = 0;
 
-function mudarImagem(n) {
-    mostrarImagem(imagemIndex += n);
+function mudarImagem(direcao) {
+    var imagens = document.getElementsByClassName('galeria-imagem');
+    imagens[currentIndex].classList.remove('active');
+    currentIndex += direcao;
+    if (currentIndex >= imagens.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = imagens.length - 1;
+    imagens[currentIndex].classList.add('active');
 }
 
-function mostrarImagem(n) {
-    let i;
-    let imagens = document.getElementsByClassName("galeria-imagem");
-    if (n >= imagens.length) {
-        imagemIndex = 0;
+// Função para mostrar o modal com a imagem ampliada
+function openModal(imgElement) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+    captionText.innerHTML = imgElement.nextElementSibling.innerHTML;
+
+    if (imgElement.naturalWidth > imgElement.naturalHeight) {
+        modalImg.classList.add('horizontal');
+        modalImg.classList.remove('vertical');
+    } else {
+        modalImg.classList.add('vertical');
+        modalImg.classList.remove('horizontal');
     }
-    if (n < 0) {
-        imagemIndex = imagens.length - 1;
-    }
-    for (i = 0; i < imagens.length; i++) {
-        imagens[i].style.display = "none";
-    }
-    imagens[imagemIndex].style.display = "block";
 }
 
-function showContent(id) {
-    var contents = document.getElementsByClassName("content");
-    for (var i = 0; i < contents.length; i++) {
-        contents[i].classList.add("hidden");
-    }
-    document.getElementById(id).classList.remove("hidden");
-    if (id === 'galeria-fotos') {
-        mostrarImagem(imagemIndex);
-    }
+// Função para fechar o modal
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
 }
+
+// Adiciona evento de clique nas imagens para abrir o modal
+var imagens = document.getElementsByClassName("galeria-imagem");
+for (var i = 0; i < imagens.length; i++) {
+    imagens[i].onclick = function () {
+        openModal(this.getElementsByTagName("img")[0]);
+    };
+}
+
+// Adiciona evento de clique no botão de fechar para fechar o modal
+var closeBtn = document.getElementsByClassName("close")[0];
+closeBtn.onclick = function () {
+    closeModal();
+};
+
+// Inicializa a galeria de fotos
+mudarImagem(0);
+
     </script>
 </body>
 </html>
