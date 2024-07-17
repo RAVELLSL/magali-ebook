@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,351 +6,354 @@
     <title>Memórias Vívidas - Magali Borges da Fonseca</title>
     <style>
         @font-face {
-    font-family: 'Scripter Serif';
-    src: url('ScripterSerif-Regular.ttf') format('truetype');
-}
+            font-family: 'Scripter Serif';
+            src: url('ScripterSerif-Regular.ttf') format('truetype');
+        }
 
-@font-face {
-    font-family: 'Lobster';
-    src: url('Lobster-Regular.ttf') format('truetype');
-}
+        @font-face {
+            font-family: 'Lobster';
+            src: url('Lobster-Regular.ttf') format('truetype');
+        }
 
-@font-face {
-    font-family: 'Open Sans';
-    src: url('OpenSans-Regular.ttf') format('truetype');
-}
+        @font-face {
+            font-family: 'Open Sans';
+            src: url('OpenSans-Regular.ttf') format('truetype');
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    background: url('https://img.freepik.com/vetores-gratis/vetor-de-design-de-papel-de-carta-marrom-em-branco_53876-175008.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-size: 18px;
-    color: #333;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
+        body {
+            background: url('https://img.freepik.com/vetores-gratis/vetor-de-design-de-papel-de-carta-marrom-em-branco_53876-175008.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-size: 18px;
+            color: #333;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border: 1px solid #4682B4;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid #4682B4;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
 
-.cabecalho {
-    background-color: #eceff1;
-    padding: 6px;
-    text-align: center;
-    border: 1px solid #4682B4;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    flex-shrink: 0;
-}
+        .cabecalho {
+            background-color: #eceff1;
+            padding: 6px;
+            text-align: center;
+            border: 1px solid #4682B4;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            flex-shrink: 0;
+        }
 
-.cabecalho h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 44px;
-    color: #004d40;
-    margin-bottom: 5px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-}
+        .cabecalho h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 44px;
+            color: #004d40;
+            margin-bottom: 5px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
 
-.cabecalho h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 26px;
-    font-weight: normal;
-    color: #00796b;
-    margin-top: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
+        .cabecalho h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 26px;
+            font-weight: normal;
+            color: #00796b;
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
 
-.corpo {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+        .corpo {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
 
-.coluna1 {
-    border: 1px solid #4682B4;
-    padding: 15px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    max-width: 250px;
-    margin-right: 15px;
-    font-size: 18px;
-}
+        .coluna1 {
+            border: 1px solid #4682B4;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 250px;
+            margin-right: 15px;
+            font-size: 18px;
+        }
 
-.coluna2 {
-    border: 1px solid #4682B4;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 4;
-    font-size: 20px;
-    overflow-y: auto; /* Adiciona barra de rolagem */
-}
+        .coluna2 {
+            border: 1px solid #4682B4;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 4;
+            font-size: 20px;
+            overflow-y: auto; /* Adiciona barra de rolagem */
+        }
 
-.coluna2 h1, .coluna2 h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 26px;
-    color: #00796b;
-}
+        .coluna2 h1, .coluna2 h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #00796b;
+        }
 
-.coluna2 p {
-    text-align: justify;
-    margin-bottom: 12px;
-    font-size: 22px;
-    line-height: 1.6;
-    color: #616161;
-    text-indent: 2cm;
-}
+        .coluna2 p {
+            text-align: justify;
+            margin-bottom: 12px;
+            font-size: 22px;
+            line-height: 1.6;
+            color: #616161;
+            text-indent: 2cm;
+        }
 
-.coluna2 img {
-    max-width: 500px; /* Aumenta o tamanho máximo das imagens no texto */
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+        .coluna2 img {
+            max-width: 500px; /* Aumenta o tamanho máximo das imagens no texto */
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+        }
 
-.capa-img {
-    max-width: 330px; /* Ajuste conforme necessário */
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid #4682B4;
-    border-radius: 8px;
-}
+        .capa-img {
+            max-width: 330px; /* Ajuste conforme necessário */
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #4682B4;
+            border-radius: 8px;
+            cursor: pointer;
+        }
 
-.rodape {
-    background-color: #eceff1;
-    padding: 6px;
-    text-align: center;
-    border: 1px solid #4682B4;
-    font-size: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    flex-shrink: 0;
-}
+        .rodape {
+            background-color: #eceff1;
+            padding: 6px;
+            text-align: center;
+            border: 1px solid #4682B4;
+            font-size: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            flex-shrink: 0;
+        }
 
-.hidden {
-    display: none;
-}
+        .hidden {
+            display: none;
+        }
 
-.coluna1 nav ul {
-    list-style-type: none;
-    padding: 0;
-}
+        .coluna1 nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-.coluna1 nav ul li {
-    text-align: center;
-    margin-bottom: 10px;
-}
+        .coluna1 nav ul li {
+            text-align: center;
+            margin-bottom: 10px;
+        }
 
-.coluna1 nav ul li a {
-    text-decoration: none;
-    color: #00796b;
-    font-weight: bold;
-    display: block;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: #eceff1;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
-}
+        .coluna1 nav ul li a {
+            text-decoration: none;
+            color: #00796b;
+            font-weight: bold;
+            display: block;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #eceff1;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+        }
 
-.coluna1 nav ul li a:hover {
-    background-color: #b2dfdb;
-}
+        .coluna1 nav ul li a:hover {
+            background-color: #b2dfdb;
+        }
 
-.galeria-container {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
+        .galeria-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
 
-.galeria-imagem {
-    display: none;
-    width: 100%;
-    height: auto;
-}
+        .galeria-imagem {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
 
-.galeria-imagem img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
-}
+        .galeria-imagem img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            cursor: pointer;
+        }
 
-.galeria-imagem p {
-    text-align: center;
-    font-size: 20px;
-}
+        .galeria-imagem p {
+            text-align: center;
+            font-size: 20px;
+        }
 
-.galeria-imagem.active {
-    display: block;
-}
+        .galeria-imagem.active {
+            display: block;
+        }
 
-.seta-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
+        .seta-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
 
-.seta-esquerda, .seta-direita {
-    cursor: pointer;
-    padding: 10px 20px;
-    color: #00796b;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.3s ease;
-    user-select: none;
-    border: 1px solid #00796b;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
-    display: inline-block;
-    margin: 0 5px;
-}
+        .seta-esquerda, .seta-direita {
+            cursor: pointer;
+            padding: 10px 20px;
+            color: #00796b;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s ease;
+            user-select: none;
+            border: 1px solid #00796b;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+            margin: 0 5px;
+        }
 
-.seta-esquerda:hover, .seta-direita:hover {
-    background-color: #b2dfdb;
-    color: white;
-}
+        .seta-esquerda:hover, .seta-direita:hover {
+            background-color: #b2dfdb;
+            color: white;
+        }
 
-#galeria-fotos {
-    overflow-y: auto;
-    flex: 1;
-    padding-right: 15px;
-}
+        #galeria-fotos {
+            overflow-y: auto;
+            flex: 1;
+            padding-right: 15px;
+        }
 
-@media screen and (max-width: 600px) {
-    .corpo {
-        flex-direction: column;
-    }
+        @media screen and (max-width: 600px) {
+            .corpo {
+                flex-direction: column;
+            }
 
-    .coluna1 {
-        margin-right: 0;
-        margin-bottom: 15px;
-        font-size: 18px;
-    }
+            .coluna1 {
+                margin-right: 0;
+                margin-bottom: 15px;
+                font-size: 18px;
+            }
 
-    .coluna1 nav ul li a {
-        padding: 12px;
-        font-size: 20px;
-    }
+            .coluna1 nav ul li a {
+                padding: 12px;
+                font-size: 20px;
+            }
 
-    .coluna2 p {
-        font-size: 22px;
-    }
+            .coluna2 p {
+                font-size: 22px;
+            }
 
-    .cabecalho, .rodape {
-        margin: 10px;
-        padding: 12px;
-        font-size: 20px;
-    }
-}
+            .cabecalho, .rodape {
+                margin: 10px;
+                padding: 12px;
+                font-size: 20px;
+            }
+        }
 
-/* Estilos do modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1001;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
-}
+        /* Estilos do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-.modal-content.horizontal {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-}
+        .modal-content.horizontal {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
 
-.modal-content.vertical {
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-}
+        .modal-content.vertical {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+        }
 
-.modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
 
-@keyframes zoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    font-size: 20px;
-    height: 150px;
-}
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            font-size: 20px;
+            height: 150px;
+        }
 
     </style>
 </head>
@@ -385,7 +387,7 @@ body {
             </aside>
             <section class="coluna2">
                 <div id="capa" class="content">                    
-                    <img class="capa-img" src="https://media.licdn.com/dms/image/D4E22AQHZoiMKFLqItw/feedshare-shrink_800/0/1721176698384?e=1724284800&v=beta&t=3j9mxLd_pZ3r2rvAGS7yoSMPKCSPRu49K137aOkZHzo" alt="Descrição da imagem" width="330" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQHZoiMKFLqItw/feedshare-shrink_800/0/1721176698384?e=1724284800&v=beta&t=3j9mxLd_pZ3r2rvAGS7yoSMPKCSPRu49K137aOkZHzo" alt="Descrição da imagem" width="330" height="auto">
                 </div>                
                 
                 <div id="agradecimentos" class="content hidden">
@@ -393,7 +395,7 @@ body {
                     <p>Diante do mundo que se apresenta para mim, estou meio amedrontada, sem saber como proceder para me sair bem. A rapidez com que tudo acontece me deixa sem condições de acompanhar tudo.</p>
                     <p>Tenho que agradecer às pessoas que contribuíram para que eu me sinta com coragem de enfrentar essa nova vida: os profissionais de saúde - enfermeiros e médicos do Hospital Esperança, onde estive internada por cinco meses, e os que continuam me atendendo em regime domiciliar - fisioterapeuta, psicólogo, massoterapeuta e nutricionista.</p>
                     <p>Agradeço, em especial, à minha irmã Iolita, que foi o grande baluarte dessa luta durante todo o período de minha internação e que continua me ajudando no dia a dia dessa nova vida. Expresso minha profunda gratidão às cuidadoras Nadiane Ferreira, Suzana Vieira e Mercês Lira. Apesar de suas distintas origens e personalidades, elas se destacaram por sua atenção e dedicação, desempenhando um papel crucial na elevação da minha autoestima. Da mesma forma, sou imensamente grata aos funcionários do condomínio, cuja assistência em variadas circunstâncias foi inestimável. Também estendo meus agradecimentos a todos os amigos e familiares que demonstraram preocupação e ofereceram suporte durante esse período desafiador, contribuindo significativamente para minha jornada de recuperação e bem-estar.</p>
-                    <p>Agradeço também aos profissionais que tem me acompanhado em regime domiciliar desde que recebi alta do hospital: Dr. Breno Barbosa (neurologista), Kaliandra Menezes (fisioterapeuta), Ana Flávia Rêgo (psicóloga), Ângela Souza (psicóloga), Karla Soares (geriatra), Mariana Lacerda (psicogeriatra), Charley Ferreira (terapeuta ocupacional), Andrine Alves (gatroenterologista), Marla Ferreira (fonoaudióloga) e Leila Pes (massoterapeuta).</p>
+                    <p>Agradeço também aos profissionais que tem me acompanhado em regime domiciliar desde que recebi alta do hospital: Dr. Breno Barbosa (neurologista), Kaliandra Menezes (fisioterapeuta), Ana Flávia Rêgo (psicóloga), Ângela Souza (psicóloga), Karla Soares (geriatra), Mariana Lacerda (psicogeriatra), Charley Ferreira (terapeuta ocupacional), Andrine Alves (gastroenterologista), Marla Ferreira (fonoaudióloga) e Leila Pes (massoterapeuta).</p>
                     <p>Agradeço ao professor Ravell pela sua habilidade, delicadeza e pelo trabalho de formatação do meu site e livro. Ele é um amigão, além de um profissional excelente, sério, dedicado aos alunos e que tem um cabedal de conhecimento e memória privilegiada, transmitindo segurança, o que o faz admirado por todos que o conhecem e desfrutam de sua amizade.</p>
                     <p>Agradeço às pessoas que têm me orientado e me atendido, e me dizem que eu não tenho que fazer como fazia antes. Devo deixar de lado as obrigações, vivendo sem amarras, sem cobranças e procurando fazer só o que é possível. Medalhas, eu já conquistei todas, e tenho que procurar viver no que se apresenta para mim, no agora.</p>
                 </div>
@@ -410,7 +412,7 @@ body {
                 
                 <div id="infancia-feliz" class="content hidden">
                     <h2>FRAGMENTOS DE UMA INFÂNCIA FELIZ</h2>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQGNBV9nenXN7g/feedshare-shrink_800/0/1721212998739?e=1724284800&v=beta&t=d-Mpg4RKAA075KJU08kyBi47OfZWOen9P-6U602E5oU" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQGNBV9nenXN7g/feedshare-shrink_800/0/1721212998739?e=1724284800&v=beta&t=d-Mpg4RKAA075KJU08kyBi47OfZWOen9P-6U602E5oU" alt="FRAGMENTOS DE UMA INFÂNCIA FELIZ" width="550" height="auto">
                     <br>
                     <p>É sempre bom recordar fatos marcantes vividos durante a nossa infância e que, com certeza, se refletiram na nossa maneira de ser e de agir nos dias de hoje...</p>
                     <p>A nossa rua era o nosso mundo particular, composto em sua maioria, por parentes e amigos de longa data. Nós formávamos um grande grupo e a discriminação não fazia parte do nosso vocabulário. Assim, meninos e meninas, brancos e negros, filhos de famílias abastadas ou de famílias humildes compunham um 'todo', cuja única preocupação era se divertir e aproveitar os momentos que a nossa convivência proporcionava...</p>
@@ -427,7 +429,7 @@ body {
 
                 <div id="severino-fonseca" class="content hidden">
                     <h1>SEVERINO FONSECA - "O CARA"</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQFliZkzdjwKAQ/feedshare-shrink_800/0/1721213066202?e=1724284800&v=beta&t=GRnbPMRpt0F06HCljG5zh1Qpi7fWX1IdmVIMcH31EM8" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQFliZkzdjwKAQ/feedshare-shrink_800/0/1721213066202?e=1724284800&v=beta&t=GRnbPMRpt0F06HCljG5zh1Qpi7fWX1IdmVIMcH31EM8" alt="SEVERINO FONSECA - O CARA" width="550" height="auto">
                     <br>
                     <p>Quando eu lembro do meu pai, me vem à mente a figura de um sujeito alegre, bonachão, sempre de bem com a vida e com os outros. Brincalhão, meio irreverente e um tanto debochado, era muito apegado à família e muito orgulhoso dos feitos/sucessos dos seus quatro filhos. Este orgulho não era sem razão, pois para um caminhoneiro, com pouco estudo, conseguir formar 01 jornalista, 02 médicos e 01 professora não foi tarefa fácil... Ao se referir aos filhos, ele dizia com carinho: "Lá em casa são 02 burros pra carga e duas cargas pra burro", mencionando os dois casais de filhos.</p>
                     <p>A preocupação com o futuro dos filhos e a necessidade de lhes abrir novos horizontes, fez com que meu pai tomasse a decisão de se mudar do interior para a capital. Com esta mudança ele deixou para trás uma vida tranquila, sem maiores preocupações, dividida entre as viagens de caminhão pelo Brasil afora (durante dias/semanas) e o retorno para casa, para o aconchego do lar, ao lado da mulher e dos filhos. A vida calma na cidade de Bom Jardim era compartilhada com uma legião de parentes e amigos, cuja maior diversão era sentar em cadeiras nas calçadas para jogar 'conversa fora' e ouvir de papai relatos dos inúmeros 'causos' acontecidos durante as viagens de caminhão pelas estradas de morte ao sul do país... Nesse particular, pode-se dizer que Seu Biu (como papai era mais conhecido) tinha um jeito todo especial de contar histórias, às quais ele emprestava o seu lado cômico e irreverente. Esta faceta lhe garantiu um sem número de admiradores que gostavam de ouvi-lo e dar gostosas gargalhadas com a sua maneira jocosa e entremeada de 'palavrões' ao narrar os acontecimentos.</p>
@@ -443,7 +445,7 @@ body {
                 
                 <div id="tempo-amizade" class="content hidden">
                     <h1>O TEMPO E A AMIZADE</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQEIFxqHchi7XA/feedshare-shrink_800/0/1721213109397?e=1724284800&v=beta&t=amUG3v8IWESbD9H5JJlqN7IaWL-A6IRTlFlk1rNl8dM" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQEIFxqHchi7XA/feedshare-shrink_800/0/1721213109397?e=1724284800&v=beta&t=amUG3v8IWESbD9H5JJlqN7IaWL-A6IRTlFlk1rNl8dM" alt="O TEMPO E A AMIZADE" width="550" height="auto">
                     <br>
                     <p>
                         Alo... Como vai?... Eu vou indo e você tudo bem?... Quanto tempo... Precisamos nos ver por ai... Prá semana quem sabe?...<br>
@@ -464,7 +466,7 @@ body {
                 
                 <div id="tempo-parou-praia-jacare" class="content hidden">
                     <h1>E O TEMPO PAROU NA PRAIA DO JACARÉ...</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQFZeYd3giL9fQ/feedshare-shrink_800/0/1721213145428?e=1724284800&v=beta&t=8IBPmNg1hPeiKWzOa4obrYDhDA3I-OLwJQ-4sb7XVD4" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQFZeYd3giL9fQ/feedshare-shrink_800/0/1721213145428?e=1724284800&v=beta&t=8IBPmNg1hPeiKWzOa4obrYDhDA3I-OLwJQ-4sb7XVD4" alt="E O TEMPO PAROU NA PRAIA DO JACARÉ..." width="550" height="auto">
                     <br>
                     <p>Há alguns dias, tive o privilégio de assistir a um espetáculo de rara beleza - o pôr-do-sol na Praia do Jacaré, em João Pessoa.</p>
                     <p>O episódio do pôr-do-sol tão comum, por ser diário, passa despercebido pela maioria da população, cujas preocupações e compromissos do dia a dia não lhe permitem parar um instante, olhar para o céu e sorver a grandeza de um momento tão belo e significativo a despedida do sol em mais um dia que se vai... Tudo era perfeito: um rio de águas calmas, montes ao longe, garças voando e um céu deslumbrante em suas cores, acompanhando o desaparecimento do nosso astro rei... Neste cenário de paz e quietude podemos dizer que o tempo parou na Praia do Jacaré e nós, simples mortais, paramos com ele...</p>
@@ -478,9 +480,9 @@ body {
 
                 <div id="virtuose-serra" class="content hidden">
                     <h1>VIRTUOSE “NA SERRA”</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQGx_s5Z9qBuqw/feedshare-shrink_800/0/1719794286046?e=1722470400&v=beta&t=e6gWXuaKEllZDUfHpcoJqM5zo_ZWWEkclhVv1J0JzMk" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQGx_s5Z9qBuqw/feedshare-shrink_800/0/1719794286046?e=1722470400&v=beta&t=e6gWXuaKEllZDUfHpcoJqM5zo_ZWWEkclhVv1J0JzMk" alt="VIRTUOSE NA SERRA" width="550" height="auto">
                     <br>
-                    <p>O programa era “imperdível”. Afinal, a realização de uma série de concertos para comemorar os 200 anos dos compositores Shumann e Chopin, com a participação de musicistas locais e internacionais e totalmente aberta ao público não era para se desprezar…</p>
+                    <p>O programa era “imperdível”. Afinal, a realização de uma série de concertos para comemorar os 200 anos dos compositores Schumann e Chopin, com a participação de musicistas locais e internacionais e totalmente aberta ao público não era para se desprezar…</p>
                     <p>Assim, partimos para Gravatá, cenário das apresentações, para curtir um raro momento de música erudita, tentando com isso conseguir um pouco de paz, de elevação do espírito tão necessário neste mundo tão conturbado e estressante em que vivemos.</p>
                     <p>Por nossa familiaridade com o município, nós já sabíamos que Gravatá carece de locais próprios para um empreendimento desta magnitude. No entanto, nós confiamos na capacidade organizacional do regente e diretor artístico, músico Rafael Garcia, na certeza de que seriam encontrados caminhos para sanar as dificuldades advindas da falta de espaço próprio para a realização do festival. Além disso, nós queríamos mostrar, com a nossa presença, que acreditamos que projetos dessa natureza têm tudo para dar certo, pois levar a música clássica para todos e em todos os lugares não se trata apenas de um sonho de um musicista apaixonado. Afinal, a orquestra virtuose já é uma realidade…</p>
                     <p>O local escolhido para as apresentações, a igreja Matriz, embora esteja situada em um ponto alto e privilegiado, fica localizada no centro do comércio, e, por isso mesmo, está sujeita a toda sorte de ruídos provenientes do grande movimento da área central da cidade. Assim, o barulho dos carros com suas buzinas, das pessoas transitando, dos comerciantes anunciando seus produtos, mostraram que o local não foi o palco ideal para a realização do evento. Além disso, por se tratar de um festival aberto ao público, as portas abertas permitiram que as pessoas entrassem e saíssem a todo momento, prejudicando a concentração daqueles que, como nós, queriam realmente curtir o espetáculo…</p>
@@ -492,7 +494,7 @@ body {
 
                 <div id="hoje-06-agosto" class="content hidden">
                     <h1>HOJE, 06 DE AGOSTO...</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQFosx-RhcJUgw/feedshare-shrink_800/0/1719794010941?e=1722470400&v=beta&t=g8LXe1PMaL178CTZB2_srR04lMzVoA09DMMe6-KXJqI" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQFosx-RhcJUgw/feedshare-shrink_800/0/1719794010941?e=1722470400&v=beta&t=g8LXe1PMaL178CTZB2_srR04lMzVoA09DMMe6-KXJqI" alt="HOJE, 06 DE AGOSTO..." width="550" height="auto">
                     <br>
                     <p>No dia 06 de Agosto de 1944 nascia na cidade de Bom Jardim, Pernambuco, a pequena Magali, filha do casal Severino e Maria Auta Fonseca...</p>
                     <p>Hoje, 06 de Agosto de 2010, eu estou completando 66 anos de idade...</p>
@@ -511,7 +513,7 @@ body {
 
                 <div id="espirito-natalino" class="content hidden">
                     <h1>O ESPÍRITO NATALINO AINDA VIVE...</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQGrQGLyhyBk1Q/feedshare-shrink_800/0/1719793567678?e=1722470400&v=beta&t=sCkUDYOActhHd6A2aeX5uoltkR7cTt_f6p7Nh16fiHg" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQGrQGLyhyBk1Q/feedshare-shrink_800/0/1719793567678?e=1722470400&v=beta&t=sCkUDYOActhHd6A2aeX5uoltkR7cTt_f6p7Nh16fiHg" alt="O ESPÍRITO NATALINO AINDA VIVE..." width="550" height="auto">
                     <br>
                     <p>Em boa hora eu me decidi a passar o dia de Natal em uma cidade do interior. O local escolhido foi a cidade de Bonito, na casa de minha amiga Consuelo. Esta minha decisão teve razão de ser... Na verdade, eu estava cansada do reboliço da cidade grande, às vésperas das festas natalinas, com seus engarrafamentos intermináveis; com seus shoppings abarrotados de uma população ansiosa pelas compras de última hora; com os apelos consumistas, via rádio e TV, de uma mídia cada vez mais poderosa e influente, enfim, com o alvoroço característico do período natalino. Por isso resolvi vivenciar uma experiência diferente e, realmente, o resultado foi melhor do que o esperado...</p>
                     <p>Nas cidades do interior ainda se vive realmente o espírito natalino. A começar pelas praças, igrejas e monumentos feericamente iluminados; o velho parque de diversões “com seus brinquedos” atraindo crianças e adultos, a euforia das famílias a preparar os quitutes da ceia de Natal para receber parentes e amigos, os abraços e os apertos de mãos e os votos de boas festas desejados pessoalmente longe das frias mensagens eletrônicas; a alegria de crianças e adultos vestindo suas melhores roupas para passear nas praças e ruas iluminadas; as badaladas dos sinos da Matriz chamando os fiéis para a Missa do Galo. Tudo isto me fez recordar os natais da minha infância passados na cidade de Bom Jardim...</p>
@@ -522,7 +524,7 @@ body {
 
                 <div id="dia-eleicao" class="content hidden">
                     <h1>DIA DE ELEIÇÃO...</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQEAE7kyOyR8Gw/feedshare-shrink_800/0/1721213206948?e=1724284800&v=beta&t=fQ5b42raVu60LQG3VwPIoiyppryh9u1EWE_kxEMMbbQ" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQEAE7kyOyR8Gw/feedshare-shrink_800/0/1721213206948?e=1724284800&v=beta&t=fQ5b42raVu60LQG3VwPIoiyppryh9u1EWE_kxEMMbbQ" alt="DIA DE ELEIÇÃO..." width="550" height="auto">
                     <br>
                     <p>Hoje, 03 de outubro de 2010, eu me dirijo mais uma vez à sessão eleitoral para votar. Neste momento, dois pensamentos antagônicos invadem a minha mente. Por um lado, eu me sinto uma cidadã consciente que exerce o direito e o dever de votar e, com isso, espera contribuir para a consolidação da democracia do seu país. É a minha consciência cívica que pesa neste momento; é o meu exercício de cidadania...</p>
                     <p>Por outro lado, eu me sinto tomada por sentimentos diversos: apatia, frieza, indiferença e, por que não dizer, revolta por me sentir "obrigada" a participar de um cenário político desastroso cujos atores principais (os candidatos) há muito deixaram de merecer a nossa credibilidade...</p>
@@ -536,7 +538,7 @@ body {
 
                 <div id="novo-coronavirus" class="content hidden">
                     <h1>O NOVO CORONAVÍRUS</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQGRuDju2kvIIw/feedshare-shrink_800/0/1721213465336?e=1724284800&v=beta&t=cGEmVL3pptDgZpXDFNscl7A9v0R-rRAle64pPtLI_7I" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQGRuDju2kvIIw/feedshare-shrink_800/0/1721213465336?e=1724284800&v=beta&t=cGEmVL3pptDgZpXDFNscl7A9v0R-rRAle64pPtLI_7I" alt="O NOVO CORONAVÍRUS" width="550" height="auto">
                     <br>
                     <p>Eu me lembro de, há alguns anos atrás, ter ouvido falar pela primeira vez do coronavírus. Na época, a mídia noticiava a incidência do vírus no Oriente Médio e dava informações sobre os riscos de contaminação, além de alertar sobre a gravidade de alguns casos. Devido ao lugar e às condições de transmissão, o assunto não mereceu maior destaque e caiu no esquecimento...</p>
                     <p>De repente, como que “saindo do nada”, surge um novo tipo de coronavírus, identificado como SARS-CoV-2 e que provoca a doença batizada de Covid-19.</p>
@@ -555,7 +557,7 @@ body {
 
                 <div id="fragmentos-infancia-feliz-80" class="content hidden">
                     <h1>FRAGMENTOS DE UMA INFÂNCIA FELIZ (Revisitado aos 80 anos)</h1>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQGKO2BueLnmUA/feedshare-shrink_800/0/1721213256290?e=1724284800&v=beta&t=i6lSc-Q7rgo1cNZXJNP1m3ONiv2dT5y3Ab2hC0EYxcc" alt="Descrição da imagem" width="550" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQGKO2BueLnmUA/feedshare-shrink_800/0/1721213256290?e=1724284800&v=beta&t=i6lSc-Q7rgo1cNZXJNP1m3ONiv2dT5y3Ab2hC0EYxcc" alt="FRAGMENTOS DE UMA INFÂNCIA FELIZ (Revisitado aos 80 anos)" width="550" height="auto">
                     <br>
                     <p>A nossa rua era o nosso mundo particular, composto em sua maioria, por parentes e amigos de longa data. Nós formávamos um grande grupo e a discriminação não fazia parte do nosso vocabulário. Assim, meninos e meninas, brancos e negros, filhos de famílias abastadas ou de famílias humildes compunham um 'todo', cuja única preocupação era se divertir e aproveitar os momentos que a nossa convivência proporcionava...</p>
                     <p>E o que dizer dos jogos e brincadeiras à noite, ao ar livre, na rua tranquila, de terra batida, com pouca circulação de veículos? Os nossos pés descalços permitiam o contato direto com a terra e a 'sujeira' das brincadeiras fazia tanto bem! A proximidade com a natureza, tão alardeada nos dias de hoje, estava presente na maioria das nossas atividades...</p>
@@ -572,7 +574,7 @@ body {
                 <div id="anexos" class="content hidden">
                     <h1>ANEXOS</h1>
                     <h2>Origem do Nome Magali</h2>
-                    <img src="https://media.licdn.com/dms/image/D4E22AQGKYeeAishFYg/feedshare-shrink_800/0/1719787997376?e=1722470400&v=beta&t=9iGrn-Tv_hD0vWEcdXKXHcaG2L2fVbCheotaVT_qDSo" alt="Descrição da imagem" width="800" height="auto">
+                    <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQGKYeeAishFYg/feedshare-shrink_800/0/1719787997376?e=1722470400&v=beta&t=9iGrn-Tv_hD0vWEcdXKXHcaG2L2fVbCheotaVT_qDSo" alt="Descrição da imagem" width="800" height="auto">
                     <br>
                     <p>Meu nome foi escolhido por minha mãe, Maria Auta Borges da Fonseca, que leu um romance de título Magali de autoria de M. Delly. Esse romance foi publicado originalmente em 1929 e integrava uma coleção chamada Biblioteca das Moças que foi lançado no Brasil e traduzido pela Editora Nacional no final da década de 1930, próximo ao meu nascimento. M. Delly é o pseudônimo dos irmãos franceses Jeanne Marie Henriette Petitjean de la Rosiére e Frédéric Petitjean de la Rosiére que juntos foram autores de diversos livros tendo estilo romântico e fantasioso com características de uma literatura “cor de rosa” sendo de bastante sucesso entre os jovens da época. </p>
                     <p>Esse livro foi adquirido em um sebo paulista e dado de presente por Nilze de Lima, uma senhora amiga, em uma comemoração Natalina na casa de meu irmão, Márcio Borges da Fonseca, na cidade de Atibaia, São Paulo, em dezembro de 1996.</p>
@@ -587,32 +589,32 @@ body {
                     <h1>GALERIA DE FOTOS</h1>
                     <div class="galeria-container">
                         <div class="galeria-imagem active">
-                            <img src="https://media.licdn.com/dms/image/D4E22AQFPzQu4rIJULg/feedshare-shrink_800/0/1720268556212?e=1723075200&v=beta&t=PFja4ysoOk9SPh4rumNKA9UY1mSh-mIwwCSaFOHT9PU" alt="Imagem 1">
+                            <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQFPzQu4rIJULg/feedshare-shrink_800/0/1720268556212?e=1723075200&v=beta&t=PFja4ysoOk9SPh4rumNKA9UY1mSh-mIwwCSaFOHT9PU" alt="Imagem 1">
                             <p>Foto no dia da formatura do curso pedagógico de Magali no Colégio Nossa Senhora do Carmo em 1963. Da esquerda para a direita: Iolita Borges (irmã), Márcio Borges (irmão), Severino Fonseca (pai), Magali Borges, Maria Auta Borges (mãe) e Múcio Borges (irmão)</p>
                         </div>
                         <div class="galeria-imagem">
-                            <img src="https://media.licdn.com/dms/image/D4E22AQFxVKo6zWsOXQ/feedshare-shrink_800/0/1720268533806?e=1723075200&v=beta&t=OyfZk9Rppvb35LOrGGCskGjSXMqO1CSy1uaWkZckyQE" alt="Imagem 2">
+                            <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQFxVKo6zWsOXQ/feedshare-shrink_800/0/1720268533806?e=1723075200&v=beta&t=OyfZk9Rppvb35LOrGGCskGjSXMqO1CSy1uaWkZckyQE" alt="Imagem 2">
                             <p>Foto dos quatro irmãos em São Paulo.<br>
                                 Magali Borges, Múcio Borges, Iolita Borges e Márcio Borges </p>
                         </div>
                         <div class="galeria-imagem">
-                            <img src="https://media.licdn.com/dms/image/D4E22AQGHJIc_-5Qfzg/feedshare-shrink_800/0/1720268681899?e=1723075200&v=beta&t=WA5etDlNSH0K9M92R7RasEqOW88qqqWNAW2oAUN_qYQ" alt="Imagem 3">
+                            <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQGHJIc_-5Qfzg/feedshare-shrink_800/0/1720268681899?e=1723075200&v=beta&t=WA5etDlNSH0K9M92R7RasEqOW88qqqWNAW2oAUN_qYQ" alt="Imagem 3">
                             <p>Foto de Magali com o diploma na formatura em 1963 recebendo o anel do irmão Múcio Borges (jornalista) sendo também a aluna laureada da turma.</p>
                         </div>
                         <div class="galeria-imagem">
-                            <img src="https://media.licdn.com/dms/image/D4E22AQFaOcpSnWPl2w/feedshare-shrink_800/0/1720268664428?e=1723075200&v=beta&t=QgkqUHEtcl-uBb94G35K_rRH8NVNy6eoP2aMYTEpp0U" alt="Imagem 4">
+                            <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQFaOcpSnWPl2w/feedshare-shrink_800/0/1720268664428?e=1723075200&v=beta&t=QgkqUHEtcl-uBb94G35K_rRH8NVNy6eoP2aMYTEpp0U" alt="Imagem 4">
                             <p>Foto no baile de formatura de Magali em 1963 com o irmão Márcio Borges que também se formou em medicina no mesmo ano.</p>
                         </div>
                         <div class="galeria-imagem">
-                            <img src="https://media.licdn.com/dms/image/D4E22AQF_bSsAebVU_A/feedshare-shrink_2048_1536/0/1720268700034?e=1723075200&v=beta&t=NnT-Ows8y8BdfO2zv1gUItVCQfMtiH0sfCSGeEDdHcI" alt="Imagem 5">
+                            <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQF_bSsAebVU_A/feedshare-shrink_2048_1536/0/1720268700034?e=1723075200&v=beta&t=NnT-Ows8y8BdfO2zv1gUItVCQfMtiH0sfCSGeEDdHcI" alt="Imagem 5">
                             <p>Foto da primeira comunhão de Magali aos 11 anos de idade.</p>
                         </div>
                         <div class="galeria-imagem">
-                            <img src="https://media.licdn.com/dms/image/D4E22AQG91F8FQNuZhw/feedshare-shrink_2048_1536/0/1720268576922?e=1723075200&v=beta&t=aTUno-zB5u0TYdOsvRbHEiC9MpnzQzCJt4jG7z_ddYc" alt="Imagem 6">
+                            <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQG91F8FQNuZhw/feedshare-shrink_2048_1536/0/1720268576922?e=1723075200&v=beta&t=aTUno-zB5u0TYdOsvRbHEiC9MpnzQzCJt4jG7z_ddYc" alt="Imagem 6">
                             <p>Foto de Magali aos 5 anos de idade.</p>
                         </div>
                         <div class="galeria-imagem">
-                            <img src="https://media.licdn.com/dms/image/D4E22AQFj_vY5WIUmUg/feedshare-shrink_2048_1536/0/1720268715600?e=1723075200&v=beta&t=FOniF_EXrBiKCph77JyBGX6rMYCIkYQ2DTJMAYCyEUs" alt="Imagem 7">
+                            <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQFj_vY5WIUmUg/feedshare-shrink_2048_1536/0/1720268715600?e=1723075200&v=beta&t=FOniF_EXrBiKCph77JyBGX6rMYCIkYQ2DTJMAYCyEUs" alt="Imagem 7">
                             <p>Foto de Magali com 1 ano de idade em Bom Jardim.</p>
                         </div>
                         <div class="seta-container">
@@ -663,7 +665,7 @@ function openModal(imgElement) {
 
     modal.style.display = "block";
     modalImg.src = imgElement.src;
-    captionText.innerHTML = imgElement.nextElementSibling.innerHTML;
+    captionText.innerHTML = imgElement.alt;
 
     if (imgElement.naturalWidth > imgElement.naturalHeight) {
         modalImg.classList.add('horizontal');
@@ -681,10 +683,10 @@ function closeModal() {
 }
 
 // Adiciona evento de clique nas imagens para abrir o modal
-var imagens = document.getElementsByClassName("galeria-imagem");
+var imagens = document.getElementsByClassName("galeria-img");
 for (var i = 0; i < imagens.length; i++) {
     imagens[i].onclick = function () {
-        openModal(this.getElementsByTagName("img")[0]);
+        openModal(this);
     };
 }
 
