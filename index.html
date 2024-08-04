@@ -5,355 +5,438 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memórias Vívidas - Magali Borges da Fonseca</title>
     <style>
-        @font-face {
-            font-family: 'Scripter Serif';
-            src: url('ScripterSerif-Regular.ttf') format('truetype');
-        }
+       @font-face {
+    font-family: 'Scripter Serif';
+    src: url('ScripterSerif-Regular.ttf') format('truetype');
+}
 
-        @font-face {
-            font-family: 'Lobster';
-            src: url('Lobster-Regular.ttf') format('truetype');
-        }
+@font-face {
+    font-family: 'Lobster';
+    src: url('Lobster-Regular.ttf') format('truetype');
+}
 
-        @font-face {
-            font-family: 'Open Sans';
-            src: url('OpenSans-Regular.ttf') format('truetype');
-        }
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Regular.ttf') format('truetype');
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            background: url('https://img.freepik.com/vetores-gratis/vetor-de-design-de-papel-de-carta-marrom-em-branco_53876-175008.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-size: 18px;
-            color: #333;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
+body {
+    background: url('https://img.freepik.com/vetores-gratis/vetor-de-design-de-papel-de-carta-marrom-em-branco_53876-175008.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-size: 18px;
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            border: 1px solid #4682B4;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-        }
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #4682B4;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
 
-        .cabecalho {
-            background-color: #eceff1;
-            padding: 6px;
-            text-align: center;
-            border: 1px solid #4682B4;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            flex-shrink: 0;
-        }
+.cabecalho {
+    background-color: #eceff1;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #4682B4;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    flex-shrink: 0;
+}
 
-        .cabecalho h1 {
-            font-family: 'Lobster', cursive;
-            font-size: 44px;
-            color: #004d40;
-            margin-bottom: 5px;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-        }
+.cabecalho h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 44px;
+    color: #004d40;
+    margin-bottom: 5px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
 
-        .cabecalho h2 {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 26px;
-            font-weight: normal;
-            color: #00796b;
-            margin-top: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
+.cabecalho h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+    color: #00796b;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-        .corpo {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+.corpo {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
-        .coluna1 {
-            border: 1px solid #4682B4;
-            padding: 15px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            max-width: 250px;
-            margin-right: 15px;
-            font-size: 18px;
-        }
+.coluna1 {
+    border: 1px solid #4682B4;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 250px;
+    margin-right: 15px;
+    font-size: 18px;
+}
 
-        .coluna2 {
-            border: 1px solid #4682B4;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 4;
-            font-size: 20px;
-            overflow-y: auto; /* Adiciona barra de rolagem */
-        }
+.coluna2 {
+    border: 1px solid #4682B4;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 4;
+    font-size: 20px;
+    overflow-y: auto; /* Adiciona barra de rolagem */
+}
 
-        .coluna2 h1, .coluna2 h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 26px;
-            color: #00796b;
-        }
+.coluna2 h1, .coluna2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #00796b;
+}
 
-        .coluna2 p {
-            text-align: justify;
-            margin-bottom: 12px;
-            font-size: 22px;
-            line-height: 1.6;
-            color: #616161;
-            text-indent: 2cm;
-        }
+.coluna2 p {
+    text-align: justify;
+    margin-bottom: 12px;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #616161;
+    text-indent: 2cm;
+}
 
-        .coluna2 img {
-            max-width: 500px; /* Aumenta o tamanho máximo das imagens no texto */
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            cursor: pointer;
-        }
+.coluna2 img {
+    max-width: 500px; /* Aumenta o tamanho máximo das imagens no texto */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
 
-        .capa-img {
-            max-width: 330px; /* Ajuste conforme necessário */
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border: 2px solid #4682B4;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+.capa-img {
+    max-width: 330px; /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #4682B4;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        .rodape {
-            background-color: #eceff1;
-            padding: 6px;
-            text-align: center;
-            border: 1px solid #4682B4;
-            font-size: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            flex-shrink: 0;
-        }
+.rodape {
+    background-color: #eceff1;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #4682B4;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    flex-shrink: 0;
+}
 
-        .hidden {
-            display: none;
-        }
+.hidden {
+    display: none;
+}
 
-        .coluna1 nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+.coluna1 nav ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        .coluna1 nav ul li {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+.coluna1 nav ul li {
+    text-align: center;
+    margin-bottom: 10px;
+}
 
-        .coluna1 nav ul li a {
-            text-decoration: none;
-            color: #00796b;
-            font-weight: bold;
-            display: block;
-            padding: 8px;
-            border-radius: 5px;
-            background-color: #eceff1;
-            transition: background-color 0.3s ease;
-            font-size: 18px;
-        }
+.coluna1 nav ul li a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #eceff1;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
 
-        .coluna1 nav ul li a:hover {
-            background-color: #b2dfdb;
-        }
+.coluna1 nav ul li a:hover {
+    background-color: #b2dfdb;
+}
 
-        .galeria-container {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
+.galeria-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
-        .galeria-imagem {
-            display: none;
-            width: 100%;
-            height: auto;
-        }
+.galeria-imagem {
+    display: none;
+    width: 100%;
+    height: auto;
+}
 
-        .galeria-imagem img {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-            cursor: pointer;
-        }
+.galeria-imagem img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    cursor: pointer;
+}
 
-        .galeria-imagem p {
-            text-align: center;
-            font-size: 20px;
-        }
+.galeria-imagem p {
+    text-align: center;
+    font-size: 20px;
+}
 
-        .galeria-imagem.active {
-            display: block;
-        }
+.galeria-imagem.active {
+    display: block;
+}
 
-        .seta-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
+.seta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 
-        .seta-esquerda, .seta-direita {
-            cursor: pointer;
-            padding: 10px 20px;
-            color: #00796b;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s ease;
-            user-select: none;
-            border: 1px solid #00796b;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.7);
-            display: inline-block;
-            margin: 0 5px;
-        }
+.seta-esquerda, .seta-direita {
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #00796b;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    user-select: none;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    margin: 0 5px;
+}
 
-        .seta-esquerda:hover, .seta-direita:hover {
-            background-color: #b2dfdb;
-            color: white;
-        }
+.seta-esquerda:hover, .seta-direita:hover {
+    background-color: #b2dfdb;
+    color: white;
+}
 
-        #galeria-fotos {
-            overflow-y: auto;
-            flex: 1;
-            padding-right: 15px;
-        }
+#galeria-fotos {
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 15px;
+}
 
-        @media screen and (max-width: 600px) {
-            .corpo {
-                flex-direction: column;
-            }
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
 
-            .coluna1 {
-                margin-right: 0;
-                margin-bottom: 15px;
-                font-size: 18px;
-            }
+.botao {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
 
-            .coluna1 nav ul li a {
-                padding: 12px;
-                font-size: 20px;
-            }
+.botao:hover {
+    background-color: #004d40;
+}
 
-            .coluna2 p {
-                font-size: 22px;
-            }
+/* Estilo para os botões específicos da galeria de fotos */
+#galeria-fotos .botao {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 12px 25px;
+    margin: 0 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-            .cabecalho, .rodape {
-                margin: 10px;
-                padding: 12px;
-                font-size: 20px;
-            }
-        }
+#galeria-fotos .botao:first-child {
+    margin-right: auto;
+}
 
-        /* Estilos do modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1001;
-            padding-top: 60px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.9);
-        }
+#galeria-fotos .botao:last-child {
+    margin-left: auto;
+}
 
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
+/* Estilo para telas menores */
+@media screen and (max-width: 600px) {
+    .corpo {
+        flex-direction: column;
+    }
 
-        .modal-content.horizontal {
-            width: 100%;
-            height: auto;
-            max-height: 100%;
-        }
+    .coluna1 {
+        margin-right: 0;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
 
-        .modal-content.vertical {
-            width: auto;
-            height: 100%;
-            max-width: 100%;
-        }
+    .coluna1 nav ul li a {
+        padding: 12px;
+        font-size: 20px;
+    }
 
-        .modal-content, #caption {
-            animation-name: zoom;
-            animation-duration: 0.6s;
-        }
+    .coluna2 p {
+        font-size: 22px;
+    }
 
-        @keyframes zoom {
-            from {transform: scale(0)}
-            to {transform: scale(1)}
-        }
+    .cabecalho, .rodape {
+        margin: 10px;
+        padding: 12px;
+        font-size: 20px;
+    }
 
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    .botoes {
+        flex-direction: column;
+    }
 
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
+    .botao {
+        margin-bottom: 10px;
+    }
+}
 
-        #caption {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            font-size: 20px;
-            height: 150px;
-        }
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-content.horizontal {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.modal-content.vertical {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 20px;
+    height: 150px;
+}
+
+/* Adicione ao seu arquivo CSS existente */
+
+#galeria-fotos {
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 15px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Adiciona um espaço abaixo dos botões */
+}
+
+.botao {
+    background: linear-gradient(to right, #2196F3, #21CBF3); /* Degradê de azul */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor dos botões */
+    transition: background 0.3s ease; /* Transição suave para o degradê */
+}
+
+.botao:hover {
+    background: linear-gradient(to right, #1E88E5, #1EADF5); /* Degradê de azul mais escuro ao passar o mouse */
+}
 
     </style>
 </head>
@@ -502,7 +585,7 @@
                     <p>O episódio do pôr-do-sol tão comum, por ser diário, passa despercebido pela maioria da população, cujas preocupações e compromissos do dia a dia não lhe permitem parar um instante, olhar para o céu e sorver a grandeza de um momento tão belo e significativo a despedida do sol em mais um dia que se vai... Tudo era perfeito: um rio de águas calmas, montes ao longe, garças voando e um céu deslumbrante em suas cores, acompanhando o desaparecimento do nosso astro rei... Neste cenário de paz e quietude podemos dizer que o tempo parou na Praia do Jacaré e nós, simples mortais, paramos com ele...</p>
                     <p>Nós estávamos numa posição estratégica, a bordo de um catamarã. Assim como nós, uma grande multidão se acotovelava às margens do rio, bem como a bordo de barcos, iates, jet-skis, todos desejosos de melhor aproveitar o espetáculo a ser oferecido...</p>
                     <p>De repente, ouviram-se os acordes de um sax solitário: era alguém executando o Bolero de Ravel... E surge o maestro Jurandir, vestido com uma túnica branca, de pé, em um pequeno barco, guiado por um simples pescador. Por um instante, a multidão se calou e reverenciou, em profundo silêncio, aquele momento belo e inesquecível. A perfeita sintonia entre a música executada com maestria e o belo espetáculo de cores no céu, deu-nos uma sensação de paz e tranquilidade; foi um momento mágico que, com certeza, jamais será esquecido por todos os que estavam presentes naquela ocasião... E o maestro, principal responsável por aquela transformação, deixou de ser uma figura comum para crescer, agigantar-se, tornar-se um ser divino a emergir do meio das águas... Acredito que o próprio Ravel estava presente naquele momento de celebração de mais um pôr-do-sol e feliz por ver a sua obra prima se encaixar tão bem naquele cenário de luzes e de cores...</p>
-                    <p>O silêncio daqueles momentos mágicos nos fez esquecer o estresse do cotidiano da cidade grande com os seus sons irritantes: as buzinas dos veículos, as sirenes das ambulâncias e dos carros de polícia; os gritos dos vendedores ambulantes; as músicas estridentes das carrocinhas de CD piratas; os gritos das manifestações populares; os tiros das batidas policiais e tantos outros sons que nos incomodam, mas com os quais somos obrigados a conviver na nossa vida diária... Por um momento, tudo era paz, quietude, harmonia...</p>
+                    <p>O silêncio daqueles momentos mágicos nos fez esquecer o estresse do cotidiano da cidade grande com os seus sons irritantes: as buzinas dos veículos, das sirenes das ambulâncias e dos carros de polícia; os gritos dos vendedores ambulantes; as músicas estridentes das carrocinhas de CD piratas; os gritos das manifestações populares; os tiros das batidas policiais e tantos outros sons que nos incomodam, mas com os quais somos obrigados a conviver na nossa vida diária... Por um momento, tudo era paz, quietude, harmonia...</p>
                     <p>E, no final do espetáculo, já em terra firme, às 18 horas, ainda fomos brindados com uma bela Ave Maria solada pelo Maestro e com a participação de um conjunto de música ao vivo...</p>
                     <p>E o nosso grupo voltou para o hotel com uma sensação de paz e de alegria e com a certeza de que, apesar dos avanços tecnológicos capazes de oferecer grandes espetáculos de luzes e de cores, ainda há espaço para parar um pouco na "corrida" pela vida e apreciar os espetáculos que a natureza nos oferece gratuitamente e a todo momento. Foi também uma oportunidade de agradecimento a Deus pela nossa capacidade de apreciar o belo nas coisas mais simples; de assimilar o verdadeiro sentido daquele espetáculo e pela oportunidade de estar presente no lugar certo na hora certa...</p>
                     <p>Parabéns aos paraibanos por saberem tão bem aproveitar este momento e por premiarem o público presente com este magnífico espetáculo que encanta a todos que têm o privilégio de assisti-lo, como nós...</p>
@@ -634,7 +717,11 @@
 
                 <div id="galeria-fotos" class="content hidden">
                     <h1>GALERIA DE FOTOS</h1>
-                    <div class="galeria-container">
+                    <div class="botoes">
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/yP9nyDoPBFx5HzZx6', '_blank')">Meu Álbum de Fotos</button>
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/uDVMg1NPpdUqFkud7', '_blank')">Galeria de Vídeos</button>
+                    </div>
+    <div class="galeria-container">
                         <div class="galeria-imagem active">
                             <img class="galeria-img" src="https://media.licdn.com/dms/image/D4E22AQFPzQu4rIJULg/feedshare-shrink_800/0/1720268556212?e=1723075200&v=beta&t=PFja4ysoOk9SPh4rumNKA9UY1mSh-mIwwCSaFOHT9PU" alt="Imagem 1">
                             <p>Foto no dia da formatura do curso pedagógico de Magali no Colégio Nossa Senhora do Carmo em 1963. Da esquerda para a direita: Iolita Borges (irmã), Márcio Borges (irmão), Severino Fonseca (pai), Magali Borges, Maria Auta Borges (mãe) e Múcio Borges (irmão)</p>
