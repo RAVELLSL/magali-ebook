@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -108,7 +109,7 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     flex: 4;
     font-size: 20px;
-    overflow-y: auto; /* Adiciona barra de rolagem */
+    overflow-y: auto;
 }
 
 .coluna2 h1, .coluna2 h2 {
@@ -128,7 +129,7 @@ body {
 }
 
 .coluna2 img {
-    max-width: 500px; /* Aumenta o tamanho máximo das imagens no texto */
+    max-width: 500px;
     height: auto;
     display: block;
     margin-left: auto;
@@ -137,7 +138,7 @@ body {
 }
 
 .capa-img {
-    max-width: 330px; /* Ajuste conforme necessário */
+    max-width: 330px;
     height: auto;
     display: block;
     margin-left: auto;
@@ -189,116 +190,37 @@ body {
     background-color: #b2dfdb;
 }
 
-.galeria-container {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+/* Ajustes para os botões na seção Meu Álbum de Fotos e Galeria de Vídeos */
+#album-videos .botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas */
+    grid-gap: 20px; /* Espaço entre os botões */
+    justify-items: center;
 }
 
-.galeria-imagem {
-    display: none;
-    width: 100%;
-    height: auto;
-}
-
-.galeria-imagem img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
-    cursor: pointer;
-}
-
-.galeria-imagem p {
-    text-align: center;
-    font-size: 20px;
-}
-
-.galeria-imagem.active {
-    display: block;
-}
-
-.seta-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.seta-esquerda, .seta-direita {
-    cursor: pointer;
-    padding: 10px 20px;
-    color: #00796b;
-    font-weight: bold;
+#album-videos .botao {
+    background: linear-gradient(to right, #2196F3, #21CBF3); /* Gradiente de azul */
+    color: white;
+    padding: 20px 40px;
     font-size: 18px;
-    transition: 0.3s ease;
-    user-select: none;
-    border: 1px solid #00796b;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.seta-esquerda:hover, .seta-direita:hover {
-    background-color: #b2dfdb;
-    color: white;
-}
-
-#galeria-fotos {
-    overflow-y: auto;
-    flex: 1;
-    padding-right: 15px;
-}
-
-.botoes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Espaço entre os botões */
-    margin-bottom: 20px;
-    height: 100%; /* Para garantir que a seção ocupe toda a altura */
-}
-
-.botao {
-    background-color: #00796b;
-    color: white;
-    padding: 30px 50px; /* Aumenta o tamanho dos botões */
+    text-align: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 22px; /* Aumenta o tamanho da fonte */
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+    width: 100%; /* Faz todos os botões terem a mesma largura */
 }
 
-.botao:hover {
-    background-color: #004d40;
+#album-videos .botao:hover {
+    background: linear-gradient(to right, #1E88E5, #1EADF5); /* Gradiente de azul escuro no hover */
 }
 
-/* Estilo para os botões específicos da galeria de fotos */
-#galeria-fotos .botao {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    padding: 12px 25px;
-    margin: 0 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+#album-videos .botao span {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-#galeria-fotos .botao:first-child {
-    margin-right: auto;
-}
-
-#galeria-fotos .botao:last-child {
-    margin-left: auto;
-}
-
-/* Estilo para telas menores */
 @media screen and (max-width: 600px) {
     .corpo {
         flex-direction: column;
@@ -326,7 +248,7 @@ body {
     }
 
     .botoes {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
     }
 
     .botao {
@@ -406,39 +328,6 @@ body {
     padding: 10px 0;
     font-size: 20px;
     height: 150px;
-}
-
-/* Adicione ao seu arquivo CSS existente */
-
-#galeria-fotos {
-    overflow-y: auto;
-    flex: 1;
-    padding-right: 15px;
-}
-
-.botoes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Espaço entre os botões */
-    margin-bottom: 20px; /* Adiciona um espaço abaixo dos botões */
-    height: 100%; /* Para garantir que a seção ocupe toda a altura */
-}
-
-.botao {
-    background: linear-gradient(to right, #2196F3, #21CBF3); /* Degradê de azul */
-    color: white; /* Cor do texto */
-    padding: 30px 50px; /* Aumenta o tamanho dos botões */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-    font-size: 22px; /* Aumenta o tamanho da fonte */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao redor dos botões */
-    transition: background 0.3s ease; /* Transição suave para o degradê */
-}
-
-.botao:hover {
-    background: linear-gradient(to right, #1E88E5, #1EADF5); /* Degradê de azul mais escuro ao passar o mouse */
 }
 
     </style>
@@ -760,8 +649,15 @@ body {
                 <!-- Nova seção Meu Álbum de Fotos e Galeria de Vídeos -->
                 <div id="album-videos" class="content hidden">
                     <h1>Meu Álbum de Fotos e Galeria de Vídeos</h1>
-                    <div class="botoes">
-                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/yP9nyDoPBFx5HzZx6', '_blank')">Meu Álbum de Fotos</button>
+                    <div class="botoes">                        
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/TwHP8TiW3DnCh4Zw5', '_blank')">Passeios</button>
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/j3vM6WnzszEfxLBr8', '_blank')">Em Casa</button>
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/bgv12B27PvADkCur6', '_blank')">Viagens</button>
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/Cmom88jfjTnTZoWGA', '_blank')">Hospital</button>
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/XDfuhVj6Xz2TkZ6Q8', '_blank')">Fotos Antigas</button>
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/xQkLjLw6o6ncboHL6', '_blank')">Fotos Variadas</button>
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/2FUPKgxUB2JSu2rcA', '_blank')">Festas</button>
+                        <button class="botao" onclick="window.open('https://photos.app.goo.gl/UuQogwrpofNfGSqJ9', '_blank')">80 Anos de Magali</button>
                         <button class="botao" onclick="window.open('https://photos.app.goo.gl/uDVMg1NPpdUqFkud7', '_blank')">Galeria de Vídeos</button>
                     </div>
                 </div>
