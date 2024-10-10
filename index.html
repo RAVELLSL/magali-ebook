@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,9 +33,10 @@ body {
     font-size: 18px;
     color: #333;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -189,7 +191,6 @@ body {
     background-color: #b2dfdb;
 }
 
-/* Ajustes para os botões na seção Meu Álbum de Fotos e Galeria de Vídeos */
 #album-videos .botoes {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas */
@@ -198,7 +199,7 @@ body {
 }
 
 #album-videos .botao {
-    background: linear-gradient(to right, #2196F3, #21CBF3); /* Gradiente de azul */
+    background: linear-gradient(to right, #2196F3, #21CBF3);
     color: white;
     padding: 20px 40px;
     font-size: 18px;
@@ -208,16 +209,61 @@ body {
     cursor: pointer;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
-    width: 100%; /* Faz todos os botões terem a mesma largura */
+    width: 100%;
 }
 
 #album-videos .botao:hover {
-    background: linear-gradient(to right, #1E88E5, #1EADF5); /* Gradiente de azul escuro no hover */
+    background: linear-gradient(to right, #1E88E5, #1EADF5);
 }
 
 #album-videos .botao span {
     font-size: 20px;
     font-weight: bold;
+}
+
+.galeria-container {
+    position: relative;
+    text-align: center;
+}
+
+.galeria-imagem {
+    display: none;
+    text-align: center;
+}
+
+.galeria-imagem.active {
+    display: block;
+}
+
+.galeria-imagem p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00796b;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.seta-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.seta-esquerda, .seta-direita {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #00796b;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.seta-esquerda:hover, .seta-direita:hover {
+    background-color: #b2dfdb;
 }
 
 @media screen and (max-width: 600px) {
@@ -253,9 +299,18 @@ body {
     .botao {
         margin-bottom: 10px;
     }
+
+    .seta-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .seta-esquerda, .seta-direita {
+        font-size: 1.5rem;
+    }
 }
 
-/* Estilos do modal */
 .modal {
     display: none;
     position: fixed;
@@ -266,7 +321,6 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -296,8 +350,8 @@ body {
 }
 
 @keyframes zoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
+    from { transform: scale(0) }
+    to { transform: scale(1) }
 }
 
 .close {
@@ -676,7 +730,8 @@ body {
     </div>
 
     <script>
-        function showContent(id) {
+  // Função para mostrar o conteúdo da seção clicada na navegação lateral
+function showContent(id) {
     var contents = document.getElementsByClassName('content');
     for (var i = 0; i < contents.length; i++) {
         contents[i].classList.add('hidden');
@@ -684,15 +739,22 @@ body {
     document.getElementById(id).classList.remove('hidden');
 }
 
+// Variável para controlar o índice da imagem atual na galeria
 var currentIndex = 0;
 
+// Função para mudar a imagem na galeria de fotos
 function mudarImagem(direcao) {
     var imagens = document.getElementsByClassName('galeria-imagem');
-    imagens[currentIndex].classList.remove('active');
+    imagens[currentIndex].classList.add('hidden'); // Esconde a imagem atual
+    imagens[currentIndex].classList.remove('active'); // Remove a classe active da imagem atual
+
+    // Ajusta o índice para ser cíclico (loop entre as imagens)
     currentIndex += direcao;
-    if (currentIndex >= imagens.length) currentIndex = 0;
-    if (currentIndex < 0) currentIndex = imagens.length - 1;
-    imagens[currentIndex].classList.add('active');
+    if (currentIndex >= imagens.length) currentIndex = 0; // Se o índice ultrapassar o limite, volta ao início
+    if (currentIndex < 0) currentIndex = imagens.length - 1; // Se o índice for negativo, vai para a última imagem
+
+    imagens[currentIndex].classList.remove('hidden'); // Mostra a próxima imagem
+    imagens[currentIndex].classList.add('active'); // Define a próxima imagem como ativa
 }
 
 // Função para mostrar o modal com a imagem ampliada
@@ -705,6 +767,7 @@ function openModal(imgElement) {
     modalImg.src = imgElement.src;
     captionText.innerHTML = imgElement.alt;
 
+    // Ajuste para manter a proporção da imagem no modal
     if (imgElement.naturalWidth > imgElement.naturalHeight) {
         modalImg.classList.add('horizontal');
         modalImg.classList.remove('vertical');
@@ -720,7 +783,7 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-// Adiciona evento de clique nas imagens para abrir o modal
+// Adiciona evento de clique nas imagens da galeria para abrir o modal
 var imagens = document.getElementsByClassName("galeria-img");
 for (var i = 0; i < imagens.length; i++) {
     imagens[i].onclick = function () {
@@ -734,7 +797,7 @@ closeBtn.onclick = function () {
     closeModal();
 };
 
-// Inicializa a galeria de fotos
+// Inicializa a galeria de fotos com a primeira imagem visível
 mudarImagem(0);
 
     </script>
